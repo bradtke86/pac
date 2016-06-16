@@ -1,0 +1,60 @@
+14:32:55.877481 IP (tos 0x0, ttl 61, id 44517, offset 0, flags [DF], proto TCP (6), length 60)
+    izcip08.ibr.cs.tu-bs.de.50172 > pac06_www1.cghm.net.http: Flags [S], cksum 0xc0b1 (correct), seq 16542684, win 29200, options [mss 1460,sackOK,TS val 575033 ecr 0,nop,wscale 7], length 0
+14:32:55.877581 IP (tos 0x0, ttl 64, id 0, offset 0, flags [DF], proto TCP (6), length 60)
+    pac06_www1.cghm.net.http > izcip08.ibr.cs.tu-bs.de.50172: Flags [S.], cksum 0x1e06 (incorrect -> 0x9ac4), seq 4187625089, ack 16542685, win 28960, options [mss 1460,sackOK,TS val 14489043 ecr 575033,nop,wscale 7], length 0
+14:32:55.878350 IP (tos 0x0, ttl 61, id 44518, offset 0, flags [DF], proto TCP (6), length 52)
+    izcip08.ibr.cs.tu-bs.de.50172 > pac06_www1.cghm.net.http: Flags [.], cksum 0x39cb (correct), seq 1, ack 1, win 229, options [nop,nop,TS val 575034 ecr 14489043], length 0
+14:32:55.878453 IP (tos 0x0, ttl 61, id 44519, offset 0, flags [DF], proto TCP (6), length 505)
+    izcip08.ibr.cs.tu-bs.de.50172 > pac06_www1.cghm.net.http: Flags [P.], cksum 0x6aa8 (correct), seq 1:454, ack 1, win 229, options [nop,nop,TS val 575034 ecr 14489043], length 453: HTTP, length: 453
+	GET /?lang=de HTTP/1.1
+	Host: 10.7.106.62
+	User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:46.0) Gecko/20100101 Firefox/46.0
+	Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+	Accept-Language: en-US,en;q=0.5
+	Accept-Encoding: gzip, deflate
+	Referer: http://10.7.106.62/?lang=de
+	Connection: keep-alive
+	If-Modified-Since: Wed, 04 May 2016 12:18:49 GMT
+	If-None-Match: "7bcb-532033a6be96c-gzip"
+	Cache-Control: max-age=0
+	
+14:32:55.878531 IP (tos 0x0, ttl 64, id 854, offset 0, flags [DF], proto TCP (6), length 52)
+    pac06_www1.cghm.net.http > izcip08.ibr.cs.tu-bs.de.50172: Flags [.], cksum 0x1dfe (incorrect -> 0x37ff), seq 1, ack 454, win 235, options [nop,nop,TS val 14489044 ecr 575034], length 0
+14:32:55.880754 IP (tos 0x0, ttl 64, id 855, offset 0, flags [DF], proto TCP (6), length 5844)
+    pac06_www1.cghm.net.http > izcip08.ibr.cs.tu-bs.de.50172: Flags [.], cksum 0x349e (incorrect -> 0x25ba), seq 1:5793, ack 454, win 235, options [nop,nop,TS val 14489044 ecr 575034], length 5792: HTTP, length: 5792
+	HTTP/1.1 200 OK
+	Date: Wed, 04 May 2016 12:32:55 GMT
+	Server: Apache/2.4.12 (Ubuntu)
+	Last-Modified: Wed, 04 May 2016 12:18:49 GMT
+	ETag: "7bcb-532033a6be96c-gzip"
+	Accept-Ranges: bytes
+	Vary: Accept-Encoding
+	Content-Encoding: gzip
+	Content-Length: 8662
+	Keep-Alive: timeout=5, max=100
+	Connection: Keep-Alive
+	Content-Type: text/html
+	
+14:32:55.880855 IP (tos 0x0, ttl 64, id 859, offset 0, flags [DF], proto TCP (6), length 3261)
+    pac06_www1.cghm.net.http > izcip08.ibr.cs.tu-bs.de.50172: Flags [P.], cksum 0x2a87 (incorrect -> 0x0b7e), seq 5793:9002, ack 454, win 235, options [nop,nop,TS val 14489044 ecr 575034], length 3209: HTTP
+14:32:55.881875 IP (tos 0x0, ttl 61, id 44520, offset 0, flags [DF], proto TCP (6), length 52)
+    izcip08.ibr.cs.tu-bs.de.50172 > pac06_www1.cghm.net.http: Flags [.], cksum 0x2c88 (correct), seq 454, ack 2897, win 274, options [nop,nop,TS val 575034 ecr 14489044], length 0
+14:32:55.882089 IP (tos 0x0, ttl 61, id 44521, offset 0, flags [DF], proto TCP (6), length 52)
+    izcip08.ibr.cs.tu-bs.de.50172 > pac06_www1.cghm.net.http: Flags [.], cksum 0x210b (correct), seq 454, ack 5793, win 319, options [nop,nop,TS val 575034 ecr 14489044], length 0
+14:32:55.882379 IP (tos 0x0, ttl 61, id 44522, offset 0, flags [DF], proto TCP (6), length 52)
+    izcip08.ibr.cs.tu-bs.de.50172 > pac06_www1.cghm.net.http: Flags [.], cksum 0x144f (correct), seq 454, ack 9002, win 369, options [nop,nop,TS val 575035 ecr 14489044], length 0
+14:32:55.892245 IP (tos 0x0, ttl 61, id 44523, offset 0, flags [DF], proto TCP (6), length 463)
+    izcip08.ibr.cs.tu-bs.de.50172 > pac06_www1.cghm.net.http: Flags [P.], cksum 0x4637 (correct), seq 454:865, ack 9002, win 369, options [nop,nop,TS val 575037 ecr 14489044], length 411: HTTP, length: 411
+	GET /img/new.css HTTP/1.1
+	Host: 10.7.106.62
+	User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:46.0) Gecko/20100101 Firefox/46.0
+	Accept: text/css,*/*;q=0.1
+	Accept-Language: en-US,en;q=0.5
+	Accept-Encoding: gzip, deflate
+	Referer: http://10.7.106.62/?lang=de
+	Connection: keep-alive
+	If-Modified-Since: Tue, 03 May 2016 12:52:16 GMT
+	If-None-Match: "7b74-531ef94333f3c-gzip"
+	Cache-Control: max-age=0
+	
+14:32:55.892456 IP (tos 0x0, ttl 

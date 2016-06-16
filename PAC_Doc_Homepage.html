@@ -1,0 +1,187 @@
+<!--?xml version="1.0" encoding="utf-8"?-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="de">
+<title>Dokumentation (Praktikum: Computernetze Administration)</title>
+<link rel="shortcut icon" href="img/ibr_shortcut.png" type="image/png">
+<link rel="stylesheet" type="text/css" href="img/new.css" media="all">
+<link rel="stylesheet" type="text/css" href="img/print.css" media="print">
+<link rel="alternate stylesheet" type="text/css" title="Alternative Stylesheet #1" href="img/alt1.css">
+<link rel="alternate stylesheet" type="text/css" title="Alternative Stylesheet #2" href="img/alt2.css">
+<script src="img/jquery_002.js" type="text/javascript"></script>
+<script src="img/ibr.js" type="text/javascript"></script>
+<script src="img/jquery.js" type="text/javascript"></script>
+<meta name="viewport" content="user-scalable=yes">
+
+
+</head>
+<body>
+	
+		<div id="wrapper_content">
+			<a id="pagetop"></a>
+	
+			<div id="tu_siegel">
+				<a href="http://www.tu-braunschweig.de/" title="TU Start">
+				<img src="img/siegel_rot.jpg" alt="TU BRAUNSCHWEIG">
+				</a>
+			</div>
+	
+			<div id="tu_path">
+				| 
+				<a href="http://www.tu-braunschweig.de/fk1">Carl-Friedrich-Gauß-Fakultät</a> 
+				| 
+				<a href="http://www.tu-braunschweig.de/informatik">Informatik</a>
+			</div>
+	
+			<div id="logo">
+				<a href="https://www.ibr.cs.tu-bs.de/" title="IBR">
+					<img alt="IBR" src="img/ibr.jpg"></img>
+				</a>
+			</div>
+			
+			<div id="symbolpic">
+				<img src="img/izbanner.jpg" 
+					title="Informatikzentrum" 
+					alt="Informatikzentrum" height="170" width="960"></img>
+			</div>
+			
+			<ul class="topnav">
+			<li class="left"><a href="https://www.ibr.cs.tu-bs.de/contact/impressum.html" 
+			title="Kontakt, Ansprechpartner, ViSdP/TMG">Impressum</a></li><li class="left">
+				<a href="https://www.ibr.cs.tu-bs.de/contact/datenschutz.html" title="Datenschutz">Datenschutz</a>
+			</li>
+			<li class="icon right">
+				<a href="https://twitter.com/ibr_tubs" title="Twitter">
+					<img src="img/twitter.png" alt="IBR on Twitter">
+				</a>
+			</li>
+			<li id="xcm_functions" onmouseover="mouseonmenu()" onmouseout="cleandelay()" title="Functions"></li>
+			<li class="right">
+				<form action="/search/index.html" id="search">
+					<input name="cx" value="012778122733566962994:1rlw_d2clxs" type="hidden">
+					<input name="cof" value="FORID:11" type="hidden">
+					<input name="ie" value="UTF-8" type="hidden">
+					<div>
+						<input id="search_field" name="q" size="15" onfocus="deleteText(this)" value="Schnellsuche" type="text">
+					</div>
+				</form>
+			</li>
+			<li class="right"><a href="/login">Login</a></li></ul>			
+			
+			<div class="linke_spalte">
+			<div class="menu">
+			<ul>
+				<li class="menu ibr">
+					<a href="/?lang=de">News</a>
+				</li>
+				<li class="menu ibr">
+					<a href="/contact/index.html?lang=de">Wir über uns</a>
+					<ul>
+						<li class="menu">
+							<a href="/contact/location.html?lang=de">Anreise</a>
+						</li>
+						<li class="menu">
+							<a href="/rooms/index.html?lang=de">Raumplan</a>
+						</li>
+						<li class="menu">
+							<a href="/projects/index.html?lang=de">Projekte</a>
+						</li>
+						<li class="menu">
+							<a href="/bib/publications.html?lang=de">Veröffentlichungen</a>
+						</li>
+						<li class="menu">
+							<a href="/news/ibr/index.html?lang=de">News Archiv</a>
+						</li>
+					</ul>
+				</li>
+				
+				
+				</ul>
+				</div>
+				</div>
+			
+			<div class="mittlere_spalte">
+			
+							<div class="inhalt">
+								
+<h1>Dokumentation des Praktikums Computernetze Administration</h1>
+								
+<b>Vergabe der IP-Adressen</b><br></br>
+
+<p>Editieren der /etc/network/interfaces.d/</p>
+
+<b>IPv4-Netzübersicht</b><br><br>
+
+<b>Netz Hauptbüro:</b><br>
+10.7.106.0/26  // Netzadresse<br>
+10.7.106.1     // Cisco Router (raus)<br>
+10.7.106.2     // Router1 (Interrouter1)<br>
+10.7.106.3-39  // Workstations<br>
+10.7.106.40-61 // freie IPs (VPN, Handys, etc)<br>
+10.7.106.62    // Webserver www1<br>
+10.7.106.63    // Broadcast Netz1<br><br>
+
+
+<b>Netz Side</b><br>
+10.7.106.64/28 // Netzadresse<br>
+10.7.106.65    // Router2 (Interrouter2)<br>
+10.7.106.66-75 // Workstations<br>
+10.7.106.76-77 // freie IPs (VPN, Handy, etc)<br>
+10.7.106.78    // Webserver www2<br>
+10.7.106.79    // Broadcast Netz2<br><br>
+
+
+<b>Netz Inter</b><br>
+10.7.106.80/30 // Netzadresse<br>
+10.7.106.81    // Router1 (Netz Main)<br>
+10.7.106.82    // Router2 (Netz Side)<br>
+10.7.106.83    // Broadcast<br><br>
+
+<b>Freie Adressen</b><br>
+10.7.106.84-127 // Noch freie Adressen<br><br>
+
+<b>Sonstige Adressen</b><br>
+10.7.6.1	// ISP-Router-Address<br>
+10.7.6.2	// Address of Cisco Router outgoing to ISP<br><br>
+
+<b>Konfiguration Cisco Router über Cisco CLI</b><br><br>
+IPv6 aktivieren: change to global configuration mode >> Befehl: "ipv6 unicast-routing"
+
+
+<br><br>
+
+Installation PHPMyAdmin
+<b>Installation eines Apache Webservers</b>
+Die Konfiguration des Apache-Webservers geschieht über die Dateien /etc/apache2/apache2.conf sowie über die /etc/apache2/ports.conf.
+
+Webseiten werden im Verzeichnis /www/html/ abgelegt.
+
+
+																		
+									
+							</div>
+							
+							<div class="fusszeile">
+							<hr></hr>
+								Seite erstellt am 28.04.2016 von S. Kratou, F. Golze und B. Radtke.
+							<div>
+								<a href="javascript:window.print()" title="Druckversion">
+									<img src="img/drucken.png" alt="print"></img>
+								</a>
+								<a href="mailto:webmaster@ibr.cs.tu-bs.de?subject=Frage/Anregung: 
+									*Ihr Stichwort*&amp;body=Ich beziehe mich auf die Seite 
+									http://www.ibr.cs.tu-bs.de/courses/ss16/pac/index.xml..." title="E-Mail-Anfragen">
+										<img src="img/email.png" alt="email">
+								</a>
+								<a href="#pagetop" title="Zum Seitenanfang"><img src="img/pagetop.png" alt="top"></a>
+							</div>
+							</div>
+			</div>
+
+			
+			
+		</div>
+</body>
+</html>
