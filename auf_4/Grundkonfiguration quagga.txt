@@ -1,0 +1,32 @@
+QUAGGA
+--------------------------------------
+=> /etc/quagga/daemons
+zebra=yes
+bgpd=yes
+ospfd=no
+ospf6d=no
+ripd=yes
+ripngd=yes
+isisd=no
+babeld=no
+
+-------------------------------------
+=> /etc/quagga/vtysh.conf
+!service integrated-vtysh-config
+hostname quagga-router
+username root nopassword
+
+echo "VTYSH_PAGER=more" >> /etc/environment
+echo "net.ipv4.ip_forward = 1" >> /etc/sysctl.conf
+
+------------------------------------
+cp /usr/share/doc/quagga/examples/zebra.conf.sample  /etc/quagga/zebra.conf
+cp /usr/share/doc/quagga/examples/bgpd.conf.sample  /etc/quagga/bgpd.conf
+cp /usr/share/doc/quagga/examples/ripd.conf.sample  /etc/quagga/ripd.conf
+cp /usr/share/doc/quagga/examples/ripngd.conf.sample  /etc/quagga/ripngd.conf
+cp /usr/share/doc/quagga/examples/vtysh.conf.sample /etc/quagga/vtysh.conf
+chown quagga:quagga *.conf
+chmod o-r *.conf
+
+------------------------------------
+service quagga restart

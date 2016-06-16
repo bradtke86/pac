@@ -1,0 +1,691 @@
+<!--?xml version="1.0" encoding="utf-8"?-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="de">
+<title>Dokumentation (Praktikum: Computernetze Administration)</title>
+<link rel="shortcut icon" href="img/ibr_shortcut.png" type="image/png">
+<link rel="stylesheet" type="text/css" href="img/new.css" media="all">
+<link rel="stylesheet" type="text/css" href="img/print.css" media="print">
+<link rel="alternate stylesheet" type="text/css" title="Alternative Stylesheet #1" href="img/alt1.css">
+<link rel="alternate stylesheet" type="text/css" title="Alternative Stylesheet #2" href="img/alt2.css">
+<script src="img/jquery_002.js" type="text/javascript"></script>
+<script src="img/ibr.js" type="text/javascript"></script>
+<script src="img/jquery.js" type="text/javascript"></script>
+<meta name="viewport" content="user-scalable=yes">
+
+
+</head>
+<body>
+	
+		<div id="wrapper_content">
+			<a id="pagetop"></a>
+	
+			<div id="tu_siegel">
+				<a href="http://www.tu-braunschweig.de/" title="TU Start">
+				<img src="img/siegel_rot.jpg" alt="TU BRAUNSCHWEIG">
+				</a>
+			</div>
+	
+			<div id="tu_path">
+				| 
+				<a href="http://www.tu-braunschweig.de/fk1">Carl-Friedrich-Gauß-Fakultät</a> 
+				| 
+				<a href="http://www.tu-braunschweig.de/informatik">Informatik</a>
+			</div>
+	
+			<div id="logo">
+				<a href="https://www.ibr.cs.tu-bs.de/" title="IBR">
+					<img alt="IBR" src="img/ibr.jpg"></img>
+				</a>
+			</div>
+			
+			<div id="symbolpic">
+				<img src="img/izbanner.jpg" 
+					title="Informatikzentrum" 
+					alt="Informatikzentrum" height="170" width="960"></img>
+			</div>
+			
+			<ul class="topnav">
+			<li class="left"><a href="https://www.ibr.cs.tu-bs.de/contact/impressum.html" 
+			title="Kontakt, Ansprechpartner, ViSdP/TMG">Impressum</a></li><li class="left">
+				<a href="https://www.ibr.cs.tu-bs.de/contact/datenschutz.html" title="Datenschutz">Datenschutz</a>
+			</li>
+			<li class="icon right">
+				<a href="https://twitter.com/ibr_tubs" title="Twitter">
+					<img src="img/twitter.png" alt="IBR on Twitter">
+				</a>
+			</li>
+			<li id="xcm_functions" onmouseover="mouseonmenu()" onmouseout="cleandelay()" title="Functions"></li>
+			<li class="right">
+				<form action="/search/index.html" id="search">
+					<input name="cx" value="012778122733566962994:1rlw_d2clxs" type="hidden">
+					<input name="cof" value="FORID:11" type="hidden">
+					<input name="ie" value="UTF-8" type="hidden">
+					<div>
+						<input id="search_field" name="q" size="15" onfocus="deleteText(this)" value="Schnellsuche" type="text">
+					</div>
+				</form>
+			</li>
+			<li class="right"><a href="/login">Login</a></li></ul>			
+			
+			<div class="linke_spalte">
+			<div class="menu">
+			<ul>
+				<li class="menu ibr">
+					<a href="/?lang=de">News</a>
+				</li>
+				<li class="menu ibr">
+					<a href="/contact/index.html?lang=de">Wir über uns</a>
+					<ul>
+						<li class="menu">
+							<a href="/contact/location.html?lang=de">Anreise</a>
+						</li>
+						<li class="menu">
+							<a href="/rooms/index.html?lang=de">Raumplan</a>
+						</li>
+						<li class="menu">
+							<a href="/projects/index.html?lang=de">Projekte</a>
+						</li>
+						<li class="menu">
+							<a href="/bib/publications.html?lang=de">Veröffentlichungen</a>
+						</li>
+						<li class="menu">
+							<a href="/news/ibr/index.html?lang=de">News Archiv</a>
+						</li>
+					</ul>
+				</li>
+				
+				
+				</ul>
+				</div>
+				</div>
+			
+			<div class="mittlere_spalte">
+			
+							<div class="inhalt">
+								
+<h1>Dokumentation des Praktikums Computernetze Administration</h1>
+								
+<b>Vergabe der IPv4- und IPv6-Adressen</b><br></br>
+
+<a href="/img/Netzplan.jpg"><b>Netzplan</b></a>
+
+<p>Editieren der /etc/network/interfaces.d/</p>
+
+<b>IPv4-Netzübersicht</b><br><br>
+
+<b>Netz Hauptgebäude:</b><br>
+10.7.106.0/26  // Netzadresse<br>
+10.7.106.1     // Cisco Router<br>
+10.7.106.2     // Router1<br>
+10.7.106.3-39  // Workstations<br>
+10.7.106.40-61 // freie IPs (VPN, Handys, etc)<br>
+10.7.106.62    // Webserver www1<br>
+10.7.106.63    // Broadcast Netz1<br><br>
+
+
+<b>Netz Nebengebäude</b><br>
+10.7.106.64/28 // Netzadresse<br>
+10.7.106.65    // Router2<br>
+10.7.106.66-75 // Workstations<br>
+10.7.106.76-77 // freie IPs (VPN, Handy, etc)<br>
+10.7.106.78    // Webserver www2<br>
+10.7.106.79    // Broadcast Netz2<br><br>
+
+
+<b>Netz Inter</b><br>
+10.7.106.80/30 // Netzadresse<br>
+10.7.106.81    // Router1<br>
+10.7.106.82    // Router2<br>
+10.7.106.83    // Broadcast<br><br>
+
+<b>Freie Adressen</b><br>
+10.7.106.84-127 // Noch freie Adressen<br><br>
+
+<b>Sonstige Adressen</b><br>
+10.7.6.1	// ISP-Router-Address<br>
+10.7.6.2	// Address of Cisco Router outgoing to ISP<br><br>
+
+
+
+<b>IPv6-Netzübersicht</b><br><br>
+
+<b>Netz Hauptgebäude:</b><br>
+2001:638:602:118a::/66            // Netzadresse<br>
+2001:638:602:118a::ce:7ba9/66     // Cisco Router (FastEthernet 0/1)<br>
+2001:638:602:118a::34:6234/66     // Router1 (eth0)<br>
+2001:638:602:118a::30:3436/66     // www1 (ens18)<br><br>
+
+
+<b>Netz Nebengebäude</b><br>
+2001:638:602:118a:4000::/66           // Netzadresse<br>
+2001:638:602:118a:4000::39:3337/66    // Router2 (eth1)<br>
+2001:638:602:118a:4000::63:3762/66    // www2 (ens18)<br><br>
+
+
+<b>Netz Inter</b><br>
+2001:638:602:118a:8000::/66           // Netzadresse<br>
+2001:638:602:118a:8000::66:3132/66    // Router2 (eth0)<br>
+2001:638:602:118a:8000::37:3636/66    // Router1 (eth1)<br><br>
+
+
+<b>Sonstige Adressen</b><br>
+fe80::21d:a2ff:fece:7ba8/10           // Cisco-Router direction ISP<br>
+fe80::1                               // Address of ISP<br><br>
+
+
+<b>Konfiguration Cisco Router über Cisco CLI</b><br><br>
+IPv6 aktivieren: change to global configuration mode >> Befehl: "ipv6 unicast-routing"<br><br>
+
+IPv4-Routen:<br>
+ip route 0.0.0.0 0.0.0.0 FastEthernet0/0 10.7.6.1<br>
+ip route 10.7.106.64 255.255.255.240 FastEthernet0/1 10.7.106.2<br>
+ip route 10.7.106.80 255.255.255.252 FastEthernet0/1 10.7.106.2<br>
+<br><br>
+
+IPv6-Routen<br>
+ipv6 route 2001:638:602:118A:4000::/66 FastEthernet0/1 2001:638:602:118A::34:6234<br>
+ipv6 route 2001:638:602:118A:8000::/66 FastEthernet0/1 2001:638:602:118A::34:6234<br>
+ipv6 route ::/0 FastEthernet0/0 FE80::1
+<br><br>
+
+<b>Routen von Router1</b><br><br>
+gateway 10.7.106.1<br> 
+10.7.106.64/28 via 10.7.106.82<br>
+gateway 2001:638:602:118a::ce:7ba9<br>
+2001:638:602:118a:4000::/66 via 2001:638:602:118a:8000::66:3132<br><br>
+
+<b>Routen von Router2</b><br><br>
+gateway 10.7.106.81<br>
+gateway 2001:638:602:118a:8000::37:3636<br><br>
+
+
+<b>Installation Apache Webserver</b><br><br>
+Die Konfiguration des Apache-Webservers geschieht über die Dateien /etc/apache2/apache2.conf sowie über die /etc/apache2/ports.conf.
+Webseiten werden im Verzeichnis /www/html/ abgelegt.<br>
+Starten des Webservers: "service apache2 start"<br><br>
+
+<b>Einrichten von bind</b><br><br>
+1.: Installation mittels "sudo apt-get install bind9"<br>
+2.: zwei Dateien erzeugen "db.cgmh.net" und "db.10.7.10"<br>
+2.a: enthalten das Mapping zwischen IP-Adresse und Domain-Name<br>
+3: in die "/etc/bind/named.conf.local" beide Zonen eintragen und 
+	die Option "check-names ignore;" eintragen, damit keine Probleme 
+	auftreten beim starten des Service.<br>
+4: bind9 starten mittels "sudo /etc/init.d/bind9 start"<br>
+5: status checken mittels "service bind9 status"<br>
+6: wenn alles ok, dann mittels dig schauen, ob der DNS-Server richtig konfiguriert ist:
+	  -> "dig @127.0.0.1 pac06_router1.cghm.net"<br><br>
+
+
+
+<b>Aufgabe 3</b><br></br>
+1.)<br></br>
+Folgende Programme sind unter ubuntu Server bereits vorhanden:<br></br>
+- tcpdump<br></br>
+- ping<br></br>
+- tracepath<br></br>
+- arp (nicht in den apt-Quellen zu finden)<br></br>
+- traceroute-nanog(ebenfalls nicht in den apt-Quellen vorhanden)<br></br>
+<br></br>
+Nachinstallation folgender Programme:<br></br>
+- tshark<br></br>
+- traceroute<br></br>
+
+
+<b>tcpdump:</b><br></br>
+Dieses Programm schneidet den Netzwerk-Traffic mit. Unter Ubuntu-Systemen
+ist tcpdump durch ein "apparmor" Profil geschützt, das die Anzahl der Dateien
+limitiert, auf die tcpdump zugreifen kann.
+<br></br>
+Optionen:<br></br>
+<b>-n</b><br></br>
+sorgt dafür, dass die Adressen (Host-Adressen, Port-Nummern, etc) nicht zu namen aufgelöst werden<br></br>
+<sub>
+06:49:11.135252 IP 134.169.34.11.33117 > 10.7.106.62.22: Flags [.], ack 2941248, win 6535, options [nop,nop,TS val 402691828 ecr 7532874], length 0<br></br>
+06:49:11.135503 IP 134.169.34.11.33117 > 10.7.106.62.22: Flags [.], ack 2941824, win 6535, options [nop,nop,TS val 402691828 ecr 7532874], length 0<br></br>
+06:49:11.135510 IP 134.169.34.11.33117 > 10.7.106.62.22: Flags [.], ack 2942528, win 6535, options [nop,nop,TS val 402691828 ecr 7532874], length 0<br></br>
+</sub>
+<br></br>
+<b>-e</b><br></br>
+hier wird der link-level header mit ausgegeben, was sinnvoll sein kann für Ethernet und IEEE 802.11<br></br>
+<sub>
+07:08:56.946968 00:1d:a2:ce:7b:a9 (oui Unknown) > 32:31:30:30:34:36 (oui Unknown), ethertype IPv4 (0x0800), length 106: x12.ibr.cs.tu-bs.de.33117 > pac06_www1.cghm.net.ssh: Flags [P.], seq 1001:1041, ack 2511096, win 3972, options [nop,nop,TS val 402988282 ecr 7829273], length 40<br></br>
+07:08:56.946980 00:1d:a2:ce:7b:a9 (oui Unknown) > 32:31:30:30:34:36 (oui Unknown), ethertype IPv4 (0x0800), length 106: x12.ibr.cs.tu-bs.de.33117 > pac06_www1.cghm.net.ssh: Flags [P.], seq 1041:1081, ack 2511096, win 3972, options [nop,nop,TS val 402988282 ecr 7829273], length 40<br></br>
+<br></br>
+8041 packets captured<br></br>
+8092 packets received by filter<br></br>
+50 packets dropped by kernel<br></br>
+</sub>
+<b>-i</b><br></br>
+Angabe des Interfaces, von dem der Traffic mitgeschnitten werden soll 
+(ist keins angegeben, dann wird das niedrigst nummerierte Interface ausgewählt);<br></br>
+"any" schneidet Traffic aller Interfaces mit<br></br>
+-i ens18 liefert z.B.:<br></br>
+<sub>
+07:00:35.761562 IP x12.ibr.cs.tu-bs.de.33117 > pac06_www1.cghm.net.ssh: Flags [P.], seq 1161:1201, ack 2846128, win 8249, options [nop,nop,TS val 402862986 ecr 7703517], length 40<br></br>
+07:00:35.761589 IP x12.ibr.cs.tu-bs.de.33117 > pac06_www1.cghm.net.ssh: Flags [P.], seq 1201:1241, ack 2846128, win 8249, options [nop,nop,TS val 402862986 ecr 7703517], length 40<br></br>
+<br></br>
+13679 packets captured<br></br>
+13725 packets received by filter<br></br>
+45 packets dropped by kernel<br></br>
+<br></br>
+</sub>
+
+<b>-s</b><br></br>
+Gibt die Länge des Snapshots eines Pakets an, um Performance zu steigern. <br></br>
+Eine Länge von 0 wird als der Default-Wert (65535) interpretiert (Angabe in Bytes)<br></br>
+-s 1536 liefert:<br></br>
+<sub>
+07:08:00.966340 IP x12.ibr.cs.tu-bs.de.33117 > pac06_www1.cghm.net.ssh: Flags [P.], seq 1081:1121, ack 2794648, win 6666, options [nop,nop,TS val 402974287 ecr 7814905], length 40<br></br>
+07:08:00.966361 IP x12.ibr.cs.tu-bs.de.33117 > pac06_www1.cghm.net.ssh: Flags [P.], seq 1121:1161, ack 2794648, win 6666, options [nop,nop,TS val 402974287 ecr 7814905], length 40<br></br>
+
+13353 packets captured<br></br>
+0 packets dropped by kernel<br></br>
+13354 packets received by filter<br></br>
+<br></br>
+</sub>
+
+<b>-r</b><br></br>
+liest die Pakete aus einer Datei, wobei bei Angabe von ``-'' der Standard-Input genutzt wird<br></br>
+Beispiel: sudo tcpdump -r tcpdump_out.txt im Home-Verzeichnis aufrufen<br></br>
+<br></br>
+<b>-w</b><br></br>
+speichert die Ausgabe in einer Datei (Beispiel auf pac6_www1 "/home/pacuser/tcpdump_out.txt")<br></br>
+<br></br>
+
+<b>ping</b><br></br>
+Dieses Programm nutzt ICMP, um echo-request Datagramme, um einen echo-response von einem Host oder Gateway zu erhalten.<br></br>
+Information zu den ECHO_REQUEST Datagrammen: bestehen aus einem IP und ICMP header, einem struct timeval <br></br>
+und einer bestimmten Anzahl an Füll-Bytes, um die Minimallänge des Pakets auszufüllen.<br></br>
+<br></br>
+
+- ping allein an 8.8.8.8 liefert:<br></br>
+<sub>
+<b>pacuser@Pac06Webserver1:~$ ping 8.8.8.8</b><br></br>
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.<br></br>
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=54 time=5.91 ms<br></br>
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=54 time=6.27 ms<br></br>
+<br></br>
+--- 8.8.8.8 ping statistics ---<br></br>
+2 packets transmitted, 2 received, 0% packet loss, time 1001ms<br></br>
+rtt min/avg/max/mdev = 5.910/6.094/6.278/0.184 ms<br></br>
+<br></br>
+</sub>
+
+<b>-R</b><br></br>
+Hier wird zusätzlich die Route angefragt. Nicht jeder Host beachtet diese Option. Zusätzlich<br></br>
+ist der IP-header nur für max. 9 Routen ausgelegt.<br></br>
+<br></br>
+kein Erfolg bei:<br></br>
+<sub>
+<b>pacuser@Pac06Webserver1:~$ ping -R linux.ibr.cs.tu-bs.de</b><br></br>
+PING x12.ibr.cs.tu-bs.de (134.169.34.11) 56(124) bytes of data.<br></br>
+<br></br>
+--- x12.ibr.cs.tu-bs.de ping statistics ---<br></br>
+60 packets transmitted, 0 received, 100% packet loss, time 59472ms<br></br>
+</sub>
+
+Erfolg liefert:<br></br>
+<sub>
+<b>pacuser@Pac06Webserver1:~$ ping -R pac06_www2.cghm.net</b><br></br>
+PING pac06_www2.cghm.net (10.7.106.78) 56(124) bytes of data.<br></br>
+64 bytes from pac06_www2.cghm.net (10.7.106.78): icmp_seq=1 ttl=62 time=1.65 ms<br></br>
+RR: 	pac06_www1.cghm.net (10.7.106.62)<br></br>
+	10.7.106.81<br></br>
+	10.7.106.65<br></br>
+	pac06_www2.cghm.net (10.7.106.78)<br></br>
+	pac06_www2.cghm.net (10.7.106.78)<br></br>
+	pac06_router2.cghm.net (10.7.106.82)<br></br>
+	router1 (10.7.106.2)<br></br>
+	pac06_www1.cghm.net (10.7.106.62)<br></br>
+<br></br>
+64 bytes from pac06_www2.cghm.net (10.7.106.78): icmp_seq=2 ttl=62 time=1.00 ms(same route)<br></br>
+64 bytes from pac06_www2.cghm.net (10.7.106.78): icmp_seq=3 ttl=62 time=1.31 ms(same route)<br></br>
+<br></br>
+--- pac06_www2.cghm.net ping statistics ---<br></br>
+3 packets transmitted, 3 received, 0% packet loss, time 2002ms<br></br>
+<br></br>
+</sub>
+
+<b>-s</b><br></br>
+definiert die Paketgröße (default 56), wird in ein 64 byte ICMP Paket übersetzt (8 Bytes ICMP header)<br></br>
+<sub>
+<b>pacuser@Pac06Webserver1:~$ ping -s 80 linux.ibr.cs.tu-bs.de</b><br></br>
+PING x12.ibr.cs.tu-bs.de (134.169.34.11) 80(108) bytes of data.<br></br>
+88 bytes from x12.ibr.cs.tu-bs.de (134.169.34.11): icmp_seq=1 ttl=61 time=0.580 ms<br></br>
+88 bytes from x12.ibr.cs.tu-bs.de (134.169.34.11): icmp_seq=2 ttl=61 time=0.948 ms<br></br>
+<br></br>
+--- x12.ibr.cs.tu-bs.de ping statistics ---<br></br>
+2 packets transmitted, 2 received, 0% packet loss, time 1001ms<br></br>
+rtt min/avg/max/mdev = 0.580/0.764/0.948/0.184 ms<br></br>
+
+<b>pacuser@Pac06Webserver1:~$ ping -s 8000 linux.ibr.cs.tu-bs.de</b><br></br>
+PING x12.ibr.cs.tu-bs.de (134.169.34.11) 8000(8028) bytes of data.<br></br>
+8008 bytes from x12.ibr.cs.tu-bs.de (134.169.34.11): icmp_seq=1 ttl=61 time=2.57 ms<br></br>
+8008 bytes from x12.ibr.cs.tu-bs.de (134.169.34.11): icmp_seq=2 ttl=61 time=2.67 ms<br></br>
+
+--- x12.ibr.cs.tu-bs.de ping statistics ---<br></br>
+2 packets transmitted, 2 received, 0% packet loss, time 1001ms<br></br>
+<br></br>
+</sub>
+
+<b>-t</b><br></br>
+Nur pingen mit der IP TTL (Time To Live)<br></br>
+<sub>
+<b>pacuser@Pac06Webserver1:~$ ping -t 80 linux.ibr.cs.tu-bs.de</b><br></br>
+PING x12.ibr.cs.tu-bs.de (134.169.34.11) 56(84) bytes of data.<br></br>
+64 bytes from x12.ibr.cs.tu-bs.de (134.169.34.11): icmp_seq=1 ttl=61 time=0.619 ms<br></br>
+64 bytes from x12.ibr.cs.tu-bs.de (134.169.34.11): icmp_seq=2 ttl=61 time=0.846 ms<br></br>
+64 bytes from x12.ibr.cs.tu-bs.de (134.169.34.11): icmp_seq=3 ttl=61 time=0.819 ms<br></br>
+<br></br>
+--- x12.ibr.cs.tu-bs.de ping statistics ---<br></br>
+3 packets transmitted, 3 received, 0% packet loss, time 2002ms<br></br>
+rtt min/avg/max/mdev = 0.619/0.761/0.846/0.103 ms<br></br>
+<b>pacuser@Pac06Webserver1:~$ ping -t 1 linux.ibr.cs.tu-bs.de</b><br></br>
+PING x12.ibr.cs.tu-bs.de (134.169.34.11) 56(84) bytes of data.<br></br>
+From pac06-cisco.cghm.net (10.7.106.1) icmp_seq=1 Time to live exceeded<br></br>
+<br></br>
+</sub>
+
+<b>tshark</b><br></br>
+Ein Traffic-Analyzer wie tcpdump, nutzt pcap-Library<br></br>
+<b>-c 10 </b>begrenzt die Anzahl der mitzuschneidenden Pakete auf 10<br></br>
+<b>-V</b> zeigt Paketdetails an<br></br>
+<b>-i ens18</b> gibt das Interface an, das überwacht werden soll<br></br>
+Möchte man den Traffic in eine Datei umleiten, dann auf der Konsole über<br></br>
+-> <b>sudo tshark -V -c 100 > file_to_save.pcap</b><br></br>
+<br></br>
+
+<sub>
+<b>pacuser@Pac06Webserver1:/tmp$ sudo tshark -V -c 1</b><br></br>
+tshark: Lua: Error during loading:<br></br>
+[string "/usr/share/wireshark/init.lua"]:46: dofile has been disabled due to running<br></br> 
+Wireshark as superuser. See http://wiki.wireshark.org/CaptureSetup/CapturePrivileges for <br></br>
+help in running Wireshark as an unprivileged user.<br></br>
+Running as user "root" and group "root". This could be dangerous.<br></br>
+Capturing on 'ens18'<br></br>
+Frame 1: 77 bytes on wire (616 bits), 77 bytes captured (616 bits) on interface 0<br></br>
+    Interface id: 0 (ens18)<br></br>
+    Encapsulation type: Ethernet (1)<br></br>
+    Arrival Time: May  4, 2016 10:17:42.473757000 CEST<br></br>
+    [Time shift for this packet: 0.000000000 seconds]<br></br>
+    Epoch Time: 1462349862.473757000 seconds<br></br>
+    [Time delta from previous captured frame: 0.000000000 seconds]<br></br>
+    [Time delta from previous displayed frame: 0.000000000 seconds]<br></br>
+    [Time since reference or first frame: 0.000000000 seconds]<br></br>
+    Frame Number: 1<br></br>
+    Frame Length: 77 bytes (616 bits)<br></br>
+    Capture Length: 77 bytes (616 bits)<br></br>
+    [Frame is marked: False]<br></br>
+    [Frame is ignored: False]<br></br>
+    [Protocols in frame: eth:ethertype:data]<br></br>
+Ethernet II, Src: Cisco_ce:7b:a9 (00:1d:a2:ce:7b:a9), Dst: DEC-MOP-Remote-Console (ab:00:00:02:00:00)<br></br>
+    Destination: DEC-MOP-Remote-Console (ab:00:00:02:00:00)<br></br>
+        Address: DEC-MOP-Remote-Console (ab:00:00:02:00:00)<br></br>
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)<br></br>
+        .... ...1 .... .... .... .... = IG bit: Group address (multicast/broadcast)<br></br>
+    Source: Cisco_ce:7b:a9 (00:1d:a2:ce:7b:a9)<br></br>
+        Address: Cisco_ce:7b:a9 (00:1d:a2:ce:7b:a9)<br></br>
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)<br></br>
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)<br></br>
+    Type: DEC DNA Remote Console (0x6002)<br></br>
+Data (63 bytes)<br></br>
+<br></br>
+0000  3d 00 07 00 00 00 01 00 03 03 00 00 02 00 02 21   =..............!<br></br>
+0010  00 03 00 06 00 00 00 00 00 00 04 00 02 3c 00 05   .............<..<br></br>
+0020  00 02 d8 05 06 00 02 00 01 07 00 06 00 1d a2 ce   ................<br></br>
+0030  7b a9 64 00 01 79 90 01 01 01 91 01 02 ee 05      {.d..y.........<br></br>
+    Data: 3d0007000000010003030000020002210003000600000000...<br></br>
+    [Length: 63]<br></br>
+<br></br>
+1 packet captured<br></br>
+<br></br>
+<b>pacuser@Pac06Webserver1:/tmp$ sudo tshark -c 10</b><br></br>
+tshark: Lua: Error during loading:<br></br>
+ [string "/usr/share/wireshark/init.lua"]:46: dofile has been disabled due to running Wireshark as superuser. <br></br>
+ See http://wiki.wireshark.org/CaptureSetup/CapturePrivileges for help in running Wireshark as an unprivileged user.<br></br>
+Running as user "root" and group "root". This could be dangerous.<br></br>
+Capturing on 'ens18'<br></br>
+  1   0.000000 Cisco_ce:7b:a9 -> CDP/VTP/DTP/PAgP/UDLD CDP 427 Device ID: RouterCisco  Port ID: FastEthernet0/1  <br></br>
+  2   0.523363  10.7.106.62 -> 134.169.34.11 SSH 218 Server: Encrypted packet (len=152)<br></br>
+  3   0.523543  10.7.106.62 -> 134.169.34.11 SSH 106 Server: Encrypted packet (len=40)<br></br>
+  4   0.524257 134.169.34.11 -> 10.7.106.62  TCP 66 33117→22 [ACK] Seq=1 Ack=153 Win=8629 Len=0 TSval=405869609 TSecr=10710640<br></br>
+  5   0.524282 134.169.34.11 -> 10.7.106.62  TCP 66 33117→22 [ACK] Seq=1 Ack=193 Win=8629 Len=0 TSval=405869609 TSecr=10710640<br></br>
+  6   1.026521  10.7.106.62 -> 134.169.34.11 SSH 202 Server: Encrypted packet (len=136)<br></br>
+  7   1.026631  10.7.106.62 -> 134.169.34.11 SSH 106 Server: Encrypted packet (len=40)<br></br>
+  8   1.026814  10.7.106.62 -> 134.169.34.11 SSH 202 Server: Encrypted packet (len=136)<br></br>
+  9   1.026920  10.7.106.62 -> 134.169.34.11 SSH 106 Server: Encrypted packet (len=40)<br></br>
+ 10   1.027054  10.7.106.62 -> 134.169.34.11 SSH 234 Server: Encrypted packet (len=168)<br></br>
+10 packets captured<br></br>
+<br></br>
+</sub>
+
+traceroute<br></br>
+gibt die Route zum angegebenen Host aus<br></br>
+<br></br>
+<b>pacuser@Pac06Webserver1:~$ traceroute 8.8.8.8</b><br></br>
+traceroute to 8.8.8.8 (8.8.8.8), 30 hops max, 60 byte packets<br></br>
+ 1  pac06-cisco.cghm.net (10.7.106.1)  1.568 ms  1.963 ms  2.395 ms<br></br>
+ 2  10.7.6.1 (10.7.6.1)  0.599 ms  0.526 ms  0.463 ms<br></br>
+ 3  switch-misc1.ibr.cs.tu-bs.de (134.169.35.254)  5.641 ms  6.299 ms  6.939 ms<br></br>
+ 4  134.169.35.253 (134.169.35.253)  0.831 ms  0.698 ms  0.832 ms<br></br>
+ 5  134.169.2.246 (134.169.2.246)  3.104 ms  3.306 ms  3.939 ms<br></br>
+ 6  xwin-po2.rz.tu-bs.de (134.169.3.44)  20.933 ms  20.816 ms  20.744 ms<br></br>
+ 7  xr-bra1-pc2.x-win.dfn.de (188.1.235.101)  1.289 ms  1.167 ms  1.090 ms<br></br>
+ 8  xr-han1-te2-1.x-win.dfn.de (188.1.145.93)  2.002 ms  2.068 ms  2.251 ms<br></br>
+ 9  cr-han2-be8.x-win.dfn.de (188.1.145.250)  2.424 ms  2.361 ms  2.237 ms<br></br>
+10  kr-hws3-1.x-win.dfn.de (188.1.236.76)  5.905 ms  5.969 ms  5.863 ms<br></br>
+11  72.14.233.130 (72.14.233.130)  6.041 ms  6.089 ms 72.14.233.128 (72.14.233.128)  6.173 ms<br></br>
+12  google-public-dns-a.google.com (8.8.8.8)  5.788 ms  5.919 ms  5.867 ms<br></br>
+<br></br>
+<b>pacuser@Pac06Webserver1:~$ traceroute -n 8.8.8.8</b><br></br>
+traceroute to 8.8.8.8 (8.8.8.8), 30 hops max, 60 byte packets<br></br>
+ 1  10.7.106.1  1.604 ms  2.243 ms  2.657 ms<br></br>
+ 2  10.7.6.1  0.657 ms  0.618 ms  0.564 ms<br></br>
+ 3  134.169.35.254  5.468 ms  6.386 ms  6.905 ms<br></br>
+ 4  134.169.35.253  0.713 ms  0.652 ms  0.594 ms<br></br>
+ 5  134.169.2.246  2.967 ms  3.343 ms  3.757 ms<br></br>
+ 6  134.169.3.44  0.747 ms  0.654 ms  0.810 ms<br></br>
+ 7  188.1.235.101  2.157 ms  2.087 ms  2.033 ms<br></br>
+ 8  188.1.145.93  2.422 ms  2.339 ms  2.275 ms<br></br>
+ 9  188.1.145.250  2.195 ms  2.350 ms  2.534 ms<br></br>
+10  188.1.236.76  5.934 ms  5.968 ms  5.890 ms<br></br>
+11  72.14.233.128  6.252 ms  6.669 ms  6.472 ms<br></br>
+12  8.8.8.8  5.742 ms  6.143 ms  5.852 ms<br></br>
+<br></br>
+
+<b>traceroute-nanog</b><br></br>
+gibt wie traceroute auch die route zum Host aus<br></br>
+
+<b>pacuser@Pac06Webserver1:~$ traceroute-nanog 8.8.8.8</b><br></br>
+traceroute to 8.8.8.8 (8.8.8.8), 30 hops max, 60 byte packets<br></br>
+ 1  pac06-cisco.cghm.net (10.7.106.1)  0.926 ms  0.790 ms  0.782 ms<br></br>
+ 2  10.7.6.1 (10.7.6.1)  0.542 ms  0.475 ms  0.360 ms<br></br>
+ 3  switch-misc1.ibr.cs.tu-bs.de (134.169.35.254)  3.078 ms  3.408 ms  2.819 ms<br></br>
+ 4  134.169.35.253 (134.169.35.253)  0.701 ms  0.552 ms  0.671 ms<br></br>
+ 5  134.169.2.246 (134.169.2.246)  2.389 ms  2.145 ms  2.176 ms<br></br>
+ 6  xwin-po2.rz.tu-bs.de (134.169.3.44)  3.090 ms  1.707 ms  19.733 ms<br></br>
+ 7  xr-bra1-pc2.x-win.dfn.de (188.1.235.101)  0.830 ms  0.803 ms  0.751 ms<br></br>
+ 8  xr-han1-te2-1.x-win.dfn.de (188.1.145.93)  2.233 ms  2.114 ms  1.878 ms<br></br>
+ 9  cr-han2-be8.x-win.dfn.de (188.1.145.250)  2.324 ms  2.080 ms  2.375 ms<br></br>
+10  kr-hws3-1.x-win.dfn.de (188.1.236.76)  5.859 ms  5.901 ms  5.831 ms<br></br>
+11  72.14.233.114 (72.14.233.114)  6.023 ms 72.14.233.130 (72.14.233.130)  6.276 ms 72.14.233.128 (72.14.233.128)  6.012 ms<br></br>
+12  google-public-dns-a.google.com (8.8.8.8)  5.948 ms  5.869 ms  5.777 ms<br></br>
+<br></br>
+
+<b>-A</b><br></br>
+zusätzliche Ausgabe der AS-Paths in den Routing-Registries direkt hinter der jeweiligen Adresse<br></br>
+<br></br>
+<b>pacuser@Pac06Webserver1:~$ traceroute-nanog -A 8.8.8.8</b><br></br>
+traceroute to 8.8.8.8 (8.8.8.8), 30 hops max, 60 byte packets<br></br>
+ 1  pac06-cisco.cghm.net (10.7.106.1) [*]  0.891 ms  0.921 ms  0.772 ms<br></br>
+ 2  10.7.6.1 (10.7.6.1) [*]  0.293 ms  0.573 ms  0.482 ms<br></br>
+ 3  switch-misc1.ibr.cs.tu-bs.de (134.169.35.254) [AS680/AS1275]  3.071 ms  2.872 ms  3.887 ms<br></br>
+ 4  134.169.35.253 (134.169.35.253) [AS680/AS1275]  0.737 ms  0.732 ms  0.627 ms<br></br>
+ 5  134.169.2.246 (134.169.2.246) [AS680/AS1275]  2.295 ms  2.304 ms  2.233 ms<br></br>
+ 6  xwin-po2.rz.tu-bs.de (134.169.3.44) [AS680/AS1275]  8.728 ms  7.269 ms  2.216 ms<br></br>
+ 7  xr-bra1-pc2.x-win.dfn.de (188.1.235.101) [AS680]  1.039 ms  1.250 ms  0.857 ms<br></br>
+ 8  xr-han1-te2-1.x-win.dfn.de (188.1.145.93) [AS680]  2.395 ms  2.292 ms  2.061 ms<br></br>
+ 9  cr-han2-be8.x-win.dfn.de (188.1.145.250) [AS680]  2.205 ms  2.341 ms  2.406 ms<br></br>
+10  kr-hws3-1.x-win.dfn.de (188.1.236.76) [AS680]  5.914 ms  7.223 ms  8.256 ms<br></br>
+11  72.14.233.86 (72.14.233.86) [AS15169]  6.263 ms  6.067 ms  6.072 ms<br></br>
+12  google-public-dns-a.google.com (8.8.8.8) [AS19905]  5.862 ms  5.919 ms  5.793 ms<br></br>
+<br></br>
+
+<b>tracepath</b><br></br>
+Ermittelt den Pfad zu einem Host mit Ausgabe der MTU (arbeitet wie traceroute nur ohne Superuser-Privileges)<br></br>
+Deutung in Aufgabenteil 2<br></br>
+<b>-m</b> begrenzt die Anzahl der Hops (maximal per default: 30)<br></br>
+<b>-b</b> sowohl Host Name als auch IP-Adressen werden ausgegeben<br></br>
+<b>-p</b> hier kann man den Zielport setzen<br></br>
+<b>-n</b> Host-Namen werden nicht aufgelöst, stattdessen wird nur die IP-Adresse ausgeben<br></br>
+<br></br>
+<b>arp</b><br></br>
+<br></br>
+Kann Informationen zum ipv4-Cache eines benachbarten Hosts anzeigen oder manipulieren(mac-adressen hinzufügen/löschen).<br></br>
+Ohne Angabe von Parametern wird lediglich Information angezeigt <br></br>
+<br></br>
+<b>-d [host]</b><br></br>
+löscht alle Einträge für den angegebenen Host (nur mit Superuser-Rechten)<br></br>
+<br></br>
+<b>-s [host] [mac-adresse des hosts]</b> fügt einen Eintrag hinzu<br></br>
+<br></br>
+<b>pacuser@Pac06Webserver1:~$ arp</b><br></br>
+Address                  HWtype  HWaddress           Flags Mask            Iface<br></br>
+router1                  ether   32:62:65:34:62:34   C                     ens18<br></br>
+pac06-cisco.cghm.net     ether   00:1d:a2:ce:7b:a9   C                     ens18<br></br>
+<b>pacuser@Pac06Webserver1:~$ arp -d router1</b><br></br>
+SIOCDARP(dontpub): Operation not permitted<br></br>
+<b>pacuser@Pac06Webserver1:~$ sudo arp -d router1</b><br></br>
+<b>pacuser@Pac06Webserver1:~$ arp</b><br></br>
+Address                  HWtype  HWaddress           Flags Mask            Iface<br></br>
+router1                          (incomplete)                              ens18<br></br>
+pac06-cisco.cghm.net     ether   00:1d:a2:ce:7b:a9   C                     ens18<br></br>
+<b>pacuser@Pac06Webserver1:~$ sudo arp -s router1 32:62:65:34:62:34</b><br></br>
+<b>pacuser@Pac06Webserver1:~$ arp</b><br></br>
+Address                  HWtype  HWaddress           Flags Mask            Iface<br></br>
+router1                  ether   32:62:65:34:62:34   CM                    ens18<br></br>
+pac06-cisco.cghm.net     ether   00:1d:a2:ce:7b:a9   C                     ens18<br></br>
+<br></br>
+
+<b>tshark</b><br></br>
+<br></br>
+<a href="https://hackertarget.com/tshark-tutorial-and-filter-examples/"><b>tshark Tutorial und Filter-Beispiele</b></a><br></br>
+<b>pacuser@Pac06Webserver1:/tmp$ sudo tshark -V -c 1</b></br>
+tshark: Lua: Error during loading:</br>
+ [string "/usr/share/wireshark/init.lua"]:46: dofile has been disabled due to running Wireshark as superuser. </br>
+ See <a href="http://wiki.wireshark.org/CaptureSetup/CapturePrivileges"></a> for help in running Wireshark as an unprivileged user.</br>
+Running as user "root" and group "root". This could be dangerous.<br></br>
+Capturing on 'ens18'<br></br>
+Frame 1: 77 bytes on wire (616 bits), 77 bytes captured (616 bits) on interface 0<br></br>
+    Interface id: 0 (ens18)<br></br>
+    Encapsulation type: Ethernet (1)<br></br>
+    Arrival Time: May  4, 2016 10:17:42.473757000 CEST<br></br>
+    [Time shift for this packet: 0.000000000 seconds]<br></br>
+    Epoch Time: 1462349862.473757000 seconds<br></br>
+    [Time delta from previous captured frame: 0.000000000 seconds]<br></br>
+    [Time delta from previous displayed frame: 0.000000000 seconds]<br></br>
+    [Time since reference or first frame: 0.000000000 seconds]<br></br>
+    Frame Number: 1<br></br>
+    Frame Length: 77 bytes (616 bits)<br></br>
+    Capture Length: 77 bytes (616 bits)<br></br>
+    [Frame is marked: False]<br></br>
+    [Frame is ignored: False]<br></br>
+    [Protocols in frame: eth:ethertype:data]<br></br>
+Ethernet II, Src: Cisco_ce:7b:a9 (00:1d:a2:ce:7b:a9), Dst: DEC-MOP-Remote-Console (ab:00:00:02:00:00)<br></br>
+    Destination: DEC-MOP-Remote-Console (ab:00:00:02:00:00)<br></br>
+        Address: DEC-MOP-Remote-Console (ab:00:00:02:00:00)<br></br>
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)<br></br>
+        .... ...1 .... .... .... .... = IG bit: Group address (multicast/broadcast)<br></br>
+    Source: Cisco_ce:7b:a9 (00:1d:a2:ce:7b:a9)<br></br>
+        Address: Cisco_ce:7b:a9 (00:1d:a2:ce:7b:a9)<br></br>
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)<br></br>
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)<br></br>
+    Type: DEC DNA Remote Console (0x6002)<br></br>
+Data (63 bytes)<br></br>
+<br></br>
+0000  3d 00 07 00 00 00 01 00 03 03 00 00 02 00 02 21   =..............!<br></br>
+0010  00 03 00 06 00 00 00 00 00 00 04 00 02 3c 00 05   .............<..<br></br>
+0020  00 02 d8 05 06 00 02 00 01 07 00 06 00 1d a2 ce   ................<br></br>
+0030  7b a9 64 00 01 79 90 01 01 01 91 01 02 ee 05      {.d..y.........<br></br>
+    Data: 3d0007000000010003030000020002210003000600000000...<br></br>
+    [Length: 63]<br></br>
+
+1 packet captured<br></br>
+
+<br></br>
+
+
+<b>2)</b><br></br>
+Tracepath zu "www.mit.edu" liefert folgende Ausgabe:<br></br>
+<br></br>
+<b>pacuser@Pac06Webserver1:~$ tracepath www.mit.edu</b><br></br>
+ <b>1?</b>: [LOCALHOST]                                 <b>pmtu 1500</b><br></br>
+ 1:  pac06-cisco.cghm.net                                  1.141ms <br></br>
+ 1:  pac06-cisco.cghm.net                                  1.050ms <br></br>
+ 2:  10.7.6.1                                              0.709ms <br></br>
+ 3:  switch-misc1.ibr.cs.tu-bs.de                          3.141ms <br></br>
+ 4:  134.169.35.253                                        0.940ms <b>asymm  3</b><br></br>
+ 5:  134.169.2.246                                         3.206ms asymm  4 <br></br>
+ 6:  xwin-po2.rz.tu-bs.de                                  1.147ms asymm  5 <br></br>
+ 7:  xr-bra1-pc2.x-win.dfn.de                              2.738ms asymm  6 <br></br>
+ 8:  xr-han1-te2-1.x-win.dfn.de                            2.726ms asymm  7 <br></br>
+ 9:  cr-han2-be8.x-win.dfn.de                              2.672ms asymm  8 <br></br>
+10:  akamai.dus.ecix.net                                   7.532ms asymm  9 <br></br>
+11:  104.94.180.36                                         8.088ms reached<br></br>
+     Resume: pmtu 1500 hops 11 back 10 <br></br>
+<br></br>
+<b>PMTU</b>: gibt die maximale Paketgröße für den ermittelten Pfad an (PMTU = Path Maximum Transmission Unit)<br></br>
+<br></br>
+1. Spalte: zeigt <b>TTL</b> an (? zeigt an, dass geraten wurde, da die benötigten Informationen nicht zur Verfügung stehen)<br></br>
+2. Spalte: zeigt entweder eine <b>Adresse zum Router</b> (bzw. den <b>DNS</b>-Namen) oder [LOCALHOST], falls nicht zum Netzwerk gesendet wurde<br></br> 
+3. Spalte: zeigt <b>RTT</b> an (Round Trip Time) oder auch <b>PMTU</b><br></br>
+4. Spalte: zeigt an, ab welchem Hop (falls vorhanden) ein asymmetrischer Pfad zwischen Hin- und Rückrichtung auftritt<br></br>
+																		
+<b>4)</b><br></br>
+Ausgabe von tcpdump in der Datei <a href="/files/btcdump">btcdump</a><br></br>
+
+<b>5)</b><br></br>
+Unser Webserver akzeptiert telnet-Verbindungen und gibt uns z.B. mittels "GET" den Inhalt der Seite aus.<br></br>
+Bei "www.dfg.de" wird die telnet-Verbindung zurückgewiesen.<br></br>
+
+<b></b><br></br>
+<b></b><br></br>
+
+
+<a href="/doku_4.txt"><b>Aufgabe 4</b></a>
+<br></br>
+
+<b>Aufgabe 5</b><br>
+<b> Zustand des Netzes, nachdem eth0 auf Router1 heruntergefahren wurde: <a href="/auf_5/traceroute_eth0_down"><b>Aufgabe 5.6 eth0 down</b></a>
+<br></br>
+<b> Zustand des Netzes, nachdem eth0 auf Router1 wieder hochgefahren wurde: <a href="/auf_5/traceroute_eth0_down"><b>Aufgabe 5.6 eth0 up</b></a>
+<br></br>
+									
+							</div>
+							
+							<div class="fusszeile">
+							<hr></hr>
+								Seite erstellt am 28.04.2016 von S. Kratou, F. Golze und B. Radtke.
+							<div>
+								<a href="javascript:window.print()" title="Druckversion">
+									<img src="img/drucken.png" alt="print"></img>
+								</a>
+								<a href="mailto:webmaster@ibr.cs.tu-bs.de?subject=Frage/Anregung: 
+									*Ihr Stichwort*&amp;body=Ich beziehe mich auf die Seite 
+									http://www.ibr.cs.tu-bs.de/courses/ss16/pac/index.xml..." title="E-Mail-Anfragen">
+										<img src="img/email.png" alt="email">
+								</a>
+								<a href="#pagetop" title="Zum Seitenanfang"><img src="img/pagetop.png" alt="top"></a>
+							</div>
+							</div>
+			</div>
+
+			
+			
+		</div>
+</body>
+</html>

@@ -1,0 +1,352 @@
+.rechte_spalte #pagetop{
+display:none;
+width:0px;
+height:0px;
+overflow:hidden;
+}
+
+#tu_navcontainer {
+display:none;
+}
+
+#tu_siegel {
+display:none;
+}
+
+#tu_path {
+display:none;
+}
+
+ul.topnav {
+display:none;
+}
+
+#seitenkopf , #navi-spalte , #rechte-spalte {
+	display : none;
+} 
+
+#sprungmarke {
+display:none;
+}
+
+#symbolpic img{
+         width: 720px;
+        height:128px;
+}
+
+div#symbolpic {
+         
+        position:absolute;
+        top:85px;
+        left:20px;
+        width: 720px;
+        height:128px;
+        }
+
+div#logo {
+     position:absolute;
+     left:315px;
+     top: 6px; 
+     width: 350px;
+     height: 74px;
+     }
+
+
+.linke_spalte, .navi0, .navi1, .navi2, .navi3, .navi4, .navi5, .navi6 {
+    visibility:collapse;
+    height: 0px;
+    width: 0px;
+    visibility:hidden; 
+    overflow:hidden;
+}
+
+body {
+	color : black; 
+	background : #ffffff; 
+	margin : 0; 
+        font-family:arial;
+        font-size: 11pt;
+} 
+
+div.mittlere_spalte{
+
+	position:absolute;
+        left:22px;
+        top:263px;
+}
+
+th {
+	background:#D3D3D3;
+	color: black;
+	font-size: 12pt;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+td {
+	font-size: 10pt;
+	text-decoration: none;
+	font-weight: normal;
+	vertical-align:top;
+}
+
+
+/* Überschriftenformatierung */
+
+h1 {
+	font-size : 10pt;
+       color: #be1e3c; 
+}
+ 
+h2 {
+      font-size:9pt;
+      color:black;
+}
+
+h3 {
+	font-size : 9pt;
+        color:#be1e3c 
+} 
+
+h4 {
+      font-size:9pt;
+     color:black;
+}
+
+h1 , h2 , h3 , h4 , h5 , h6 {
+	font-family : Arial; 
+	text-decoration : none; 
+	font-weight : bold; 
+	background-color : white; 
+} 
+
+
+/* Linkformatierung */
+
+a {
+    color: #be1e3c;
+    text-decoration:none;
+    font-weight: normal;
+}
+
+/* Visualisierung von Verweiszielen */
+
+/*
+ .mittlere_spalte a[href]:after {
+ content:" <"attr(href)">";
+ color:#DCDCDC;
+ size:80%;
+} 
+
+ .fusszeile a[href]:after {
+ content:" ";
+} 
+*/
+
+.fusszeile a{
+   font-size: 8pt;
+}
+
+
+.fusszeile a2{
+   font-size: 8pt;
+}
+
+.fusszeile {
+   font-size:8pt;
+}
+
+tt {
+       font-family:Arial;
+}
+
+p , dt , dd , li, strong {
+	font-size : 8pt; 
+	font-family : Arial; 
+	line-height : 1.5em; 
+	color : #000000; 
+	background-color : transparent; 
+	background-color : white; 
+	/* text-justify : newspaper; 
+	text-align : justify;  */
+	/* word-break : normal;  */
+} 
+
+blockquote, q {
+	/*	text-align: right;  ersetzt durch Einzug von links: */
+	font-style: italic;
+	font-size: 8pt;
+	line-height: 1.5em;
+	margin-bottom: 18pt;
+}
+
+blockquote {
+ 	margin-left: 80px; 
+	background-color: #fafafa; 
+}
+
+cite { 
+	font-size: 8pt;
+	background-color: #fff;
+}
+
+
+code { 
+	font-weight: bold;
+	background-color: #fafafa;
+}
+
+
+/*	2005-01-26me: aus strong herausgeschnitten +  zu eigener Klasse gemacht, weil Eonpro3 alle <b> zu <strong> wandelt */
+.rot {
+	color : #cc3333; 
+	background-color : white; 
+	font-family : Arial; 
+}
+
+hr {
+	color : silver; 
+	background-color : silver; 
+	height : 1px; 
+} 
+
+.bu , .fusszeile {
+	font-size : 8pt; 
+	font-family : Arial; 
+	text-decoration : none; 
+	font-weight : normal; 
+	color : #666666; 
+	line-height : 1.5em; 
+	text-decoration : none; 
+} 
+
+.bu {
+	text-align : right; 
+} 
+
+.geisterschrift {
+	color : silver; 
+} 
+
+/* "Wenn Sie für ein Element eine Angabe zu float notieren, müssen Sie auch eine Angabe zu  width definieren"
+(http://de.selfhtml.org/css/eigenschaften/positionierung.htm#float) */
+img {
+	border : 0 ; 
+} 
+
+.left {
+	float : left; 
+	margin-right : 10px; 
+} 
+
+.right {
+	float : right; 
+	margin-left : 10px; 
+} 
+
+ul li {
+	list-style-type : disc; 
+	color : #003366; 
+} 
+
+/* für den Fall geordnete Aufz innerh einer ungeordneten: */
+ul ol li {
+	list-style-type: decimal;
+	list-style-image: none;
+}
+
+
+dt {
+	font-size : 9pt; 
+	text-decoration : none; 
+	font-weight : bold; 
+	color : #000000; 
+	background-color : transparent; 
+	line-height : 1.5em; 
+	margin-bottom : 2px; 
+	page-break-after : avoid; 
+} 
+
+dd {
+	margin-bottom : 16px; 
+} 
+
+/* http://www.w3.org/TR/REC-CSS2/generate.html#quotes
+Specify pairs of quotes for two levels in two languages
+gem. http://www.tu-braunschweig.de/cd/anf-strich
+i.V.m. http://de.selfhtml.org/html/referenz/zeichen.htm
+egal ob maskiert oder mit copy&paste: Druckversion zeigt nur gerade Anf'striche :(  */
+
+q:lang(de) {
+	quotes: "&bdquo;" "&ldquo;" "&sbquo;" "&lsquo;"; 
+}
+
+q:lang(en) {
+	quotes: "&ldquo;" "&rdquo;" "&lsquo;" "&rsquo;"; 
+}  
+
+/* Insert quotes before and after Q element content */
+q:before {
+	content: open-quote; 
+}
+
+q:after  {
+	content: close-quote; 
+}
+#symbolpic,
+#tu_navcontainer,
+.topnav,
+#logo,
+.linke_spalte,
+.fusszeile,
+.snippet {
+    display:none;
+}
+
+body, #wrapper_content, .mittlere_spalte, .inhalt {
+    left:2cm;
+    margin-right:2cm;
+    width:auto;
+    font-size: 11pt;
+}
+
+th {
+	font-size: 11pt;
+}
+
+td {
+	font-size: 11pt;
+}
+
+h1 {
+	font-size : 14pt;
+}
+ 
+h2 {
+      font-size:13pt;
+}
+
+h3 {
+	font-size : 12pt;
+} 
+
+h4 {
+      font-size:11pt;
+}
+
+p , dt , dd , li, strong {
+	font-size : 11pt; 
+}
+
+blockquote, q {
+	font-size: 11pt;
+}
+
+cite { 
+	font-size: 11pt;
+}
+
+dt {
+	font-size : 11pt; 
+}
+

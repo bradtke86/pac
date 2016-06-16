@@ -1,0 +1,54 @@
+.inhalt > h1:first-child, .inhalt > h2:first-child {
+	margin-top: 0;
+	padding-top: 0;
+}
+
+/*
+.inhalt a {
+	color: red !important;
+}
+*/
+
+.inhalt {
+	width: 530px;
+}
+
+.snippet {
+	right: -200px;
+}
+
+/*
+div.vcard {
+	height: 90px !important;
+}
+*/
+
+h2 {
+	color: #be1e3c;
+	font-size: 18px;
+}
+
+div.menu > ul > li > a, div.menu > ul > li > span {
+	background-color: transparent;
+}
+
+div.news h2 {
+	background-color: transparent;
+}
+
+div.news {
+	background-color: transparent;
+	border: none;
+	margin-top: 0;
+}
+
+div.news + div.news {
+	border-top: 1px solid #ccc;
+	padding-top: 20px;
+}
+
+/*
+.inhalt > ul, .inhalt > p {
+	display: none;
+}
+*/

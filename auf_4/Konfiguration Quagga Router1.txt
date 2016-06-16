@@ -1,0 +1,18 @@
+IPv4
+----------------------------------------------
+quagga-router(config)# router rip
+quagga-router(config-router)# version 2
+quagga-router(config-router)# network eth0
+quagga-router(config-router)# network eth1
+quagga-router(config)# ip route 0.0.0.0/0 10.7.106.1
+
+quagga-router# write
+
+IPv6
+---------------------------------------------
+quagga-router(config)# router ripng
+quagga-router(config-router)# network eth0
+quagga-router(config-router)# network eth1
+quagga-router(config)# ipv6 route ::/0 2001:638:602:118a::ce:7ba9
+
+quagga-router# write

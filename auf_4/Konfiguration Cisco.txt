@@ -1,0 +1,18 @@
+CISCO-Router
+--------------------------------------
+=> IPv4
+RouterCisco(config)#router rip
+RouterCisco(config-router)#network 10.7.106.0
+RouterCisco(config-router)#network 10.7.6.0
+RouterCisco(config-router)#neighbor 10.7.106.2
+RouterCisco(config-router)#neighbor 10.7.6.1   
+RouterCisco(config-router)#version 2
+ip route 0.0.0.0 0.0.0.0 FastEthernet0/0 10.7.6.1
+
+=> IPv6
+RouterCisco(config)#ipv6 unicast-routing
+RouterCisco(config)#interface FastEthernet 0/1 
+RouterCisco(config-if)#ipv6 rip process1 enable
+RouterCisco(config)#interface FastEthernet 0/0 
+RouterCisco(config-if)#ipv6 rip process1 enable 
+ipv6 route ::/0 FastEthernet0/0 FE80::1

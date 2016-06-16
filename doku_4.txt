@@ -1,0 +1,99 @@
+Grundkonfiguration QUAGGA
+--------------------------------------
+=> /etc/quagga/daemons
+zebra=yes
+bgpd=yes
+ospfd=no
+ospf6d=no
+ripd=yes
+ripngd=yes
+isisd=no
+babeld=no
+
+-------------------------------------
+=> /etc/quagga/vtysh.conf
+!service integrated-vtysh-config
+hostname quagga-router
+username root nopassword
+
+echo "VTYSH_PAGER=more" >> /etc/environment
+echo "net.ipv4.ip_forward = 1" >> /etc/sysctl.conf
+
+------------------------------------
+cp /usr/share/doc/quagga/examples/zebra.conf.sample  /etc/quagga/zebra.conf
+cp /usr/share/doc/quagga/examples/bgpd.conf.sample  /etc/quagga/bgpd.conf
+cp /usr/share/doc/quagga/examples/ripd.conf.sample  /etc/quagga/ripd.conf
+cp /usr/share/doc/quagga/examples/ripngd.conf.sample  /etc/quagga/ripngd.conf
+cp /usr/share/doc/quagga/examples/vtysh.conf.sample /etc/quagga/vtysh.conf
+chown quagga:quagga *.conf
+chmod o-r *.conf
+
+------------------------------------
+service quagga restart
+
+################################################################################
+
+CISCO-Router
+--------------------------------------
+=> IPv4
+RouterCisco(config)#router rip
+RouterCisco(config-router)#network 10.7.106.0
+RouterCisco(config-router)#network 10.7.6.0
+RouterCisco(config-router)#neighbor 10.7.106.2
+RouterCisco(config-router)#neighbor 10.7.6.1   
+RouterCisco(config-router)#version 2
+ip route 0.0.0.0 0.0.0.0 FastEthernet0/0 10.7.6.1
+
+=> IPv6
+RouterCisco(config)#ipv6 unicast-routing
+RouterCisco(config)#interface FastEthernet 0/1 
+RouterCisco(config-if)#ipv6 rip process1 enable
+RouterCisco(config)#interface FastEthernet 0/0 
+RouterCisco(config-if)#ipv6 rip process1 enable 
+ipv6 route ::/0 FastEthernet0/0 FE80::1
+
+###################################################################################
+
+Router1-quagga
+
+IPv4
+----------------------------------------------
+quagga-router(config)# router rip
+quagga-router(config-router)# version 2
+quagga-router(config-router)# network eth0
+quagga-router(config-router)# network eth1
+quagga-router(config)# ip route 0.0.0.0/0 10.7.106.1
+
+quagga-router# write
+
+IPv6
+---------------------------------------------
+quagga-router(config)# router ripng
+quagga-router(config-router)# network eth0
+quagga-router(config-router)# network eth1
+quagga-router(config)# ipv6 route ::/0 2001:638:602:118a::ce:7ba9
+
+quagga-router# write
+
+#####################################################################################
+
+Router2-quagga
+
+IPv4
+--------------------------------------------
+quagga-router(config)# router rip
+quagga-router(config-router)# version 2
+quagga-router(config-router)# network eth0
+quagga-router(config-router)# network eth1
+quagga-router(config)# ip route 0.0.0.0/0 10.7.106.81
+
+quagga-router# write
+
+IPv6
+---------------------------------------------
+quagga-router(config)# router ripng
+quagga-router(config-router)# network eth0
+quagga-router(config-router)# network eth1
+quagga-router(config)# ipv6 route ::/0 2001:638:602:118a:8000::37:3636
+
+quagga-router# write

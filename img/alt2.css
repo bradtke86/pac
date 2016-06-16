@@ -1,0 +1,107 @@
+
+a {
+    text-decoration: none;
+}
+
+a:link {
+    color: #be1e3c;
+}
+
+a:visited {
+     color: #be1e3c;
+}
+
+a:hover {
+    color: #ffffff;
+    background-color:  #be1e3c;
+    text-decoration: none;
+}
+
+a:active{
+    color: #ffffff;
+    background-color:  #be1e3c;
+    text-decoration: none;
+}
+
+a:focus {
+    color: #ffffff;
+    background-color:  #be1e3c;
+    text-decoration: none;
+}
+
+div.news {
+    overflow: hidden;
+    padding: 5px;
+    line-height: 1.3;
+}
+
+div.news:hover {
+    background-color: #dcdcdc;
+}
+
+div.news + div.news {
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+}
+
+
+div.news h2 {
+    padding-top: 0px;
+    display: inline;
+    font-size: 12pt;
+    color: rgb(190, 30, 60);
+    background-color: transparent;
+}
+
+div.news div {
+    padding-top: 0.3em;
+    padding-left: 0em;
+    display: block;
+    font-size: 11px;
+}
+
+table.course {
+    border: none;
+    border-spacing: 2px;
+}
+
+table.course td {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+table.course tr:nth-child(2n+1) {
+    background-color: transparent;
+}
+
+table.course th {
+    background-color: #999;
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: none;
+}
+
+div.project {
+    background-color: transparent;
+    border-color: #dcdcdc;
+    border-width: 1px;
+    border-style: solid;
+}
+
+div.project:hover {
+    border-color: #be1e3c;
+    background-color: #dcdcdc;
+}
+
+div.menu > ul > li > a, div.menu > ul > li > span {
+    background-color: transparent;
+}
+
+div.menu a:hover {
+    background-color: transparent;
+}
