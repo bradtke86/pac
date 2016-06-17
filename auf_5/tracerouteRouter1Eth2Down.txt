@@ -1,4 +1,4 @@
-Nachdem eth0 auf Router1 heruntergefahren wurde:
+Nachdem eth2 auf Router1 heruntergefahren wurde:
 
 y0053599@izcip07:~$ traceroute 10.7.106.62
 traceroute to 10.7.106.62 (10.7.106.62), 30 hops max, 60 byte packets
