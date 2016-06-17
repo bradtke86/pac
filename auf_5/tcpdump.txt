@@ -1,0 +1,576 @@
+Router1:
+
+
+
+root@router1:~# tcpdump -s1600 -vni eth0 port 520
+
+tcpdump: listening on eth0, link-type EN10MB (Ethernet), capture size 1600 bytes
+
+13:02:59.942018 IP (tos 0xc0, ttl 1, id 40512, offset 0, flags [DF], proto UDP (17), length 52)
+10.7.106.2.520 > 224.0.0.9.520: 
+	
+RIPv2, Request, length: 24, routes: 1 or less
+AFI 0,         0.0.0.0/0 , tag 0x0000, metric: 16, next-hop: self
+
+13:02:59.944372 IP (tos 0xc0, ttl 255, id 0, offset 0, flags [none], proto UDP (17), length 532)
+  
+10.7.106.1.520 > 10.7.106.2.520: 
+RIPv2, Response, length: 504, routes: 25 or less
+
+	  AFI IPv4,        10.7.1.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,        10.7.2.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,        10.7.3.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,        10.7.4.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,        10.7.5.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,        10.7.6.0/30, tag 0x0000, metric: 1, next-hop: self
+	  AFI IPv4,        10.7.7.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,       10.7.11.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,       10.7.12.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,       10.7.13.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,       10.7.14.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,       10.7.15.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,       10.7.16.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,       10.7.17.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,      10.7.102.0/25, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,    10.7.102.128/26, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,    10.7.102.192/30, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,      10.7.103.0/26, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,     10.7.103.64/28, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,     10.7.103.80/30, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,      10.7.104.0/25, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,    10.7.104.128/25, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,    10.7.104.128/26, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,    10.7.104.252/30, tag 0x0000, metric: 4, next-hop: self
+	  AFI IPv4,      10.7.105.0/25, tag 0x0000, metric: 4, next-hop: self
+
+13:02:59.944520 IP (tos 0xc0, ttl 255, id 0, offset 0, flags [none], proto UDP (17), length 72)
+
+10.7.106.1.520 > 10.7.106.2.520: 
+
+RIPv2, Response, length: 44, routes: 2 or less
+	  AFI IPv4,    10.7.105.128/26, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,    10.7.105.192/30, tag 0x0000, metric: 3, next-hop: self
+
+13:03:09.842994 IP (tos 0xc0, ttl 1, id 41463, offset 0, flags [DF], proto UDP (17), length 132)
+
+10.7.106.2.520 > 224.0.0.9.520: 
+RIPv2, Response, length: 104, routes: 5 or less
+
+	  AFI IPv4,         0.0.0.0/0 , tag 0x0000, metric: 1, next-hop: 10.7.106.1
+	  AFI IPv4,       10.7.16.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,     10.7.103.80/30, tag 0x0000, metric: 4, next-hop: self
+	  AFI IPv4,     10.7.106.64/28, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,     10.7.106.80/30, tag 0x0000, metric: 1, next-hop: self
+
+13:03:24.080165 IP (tos 0xc0, ttl 2, id 0, offset 0, flags [none], proto UDP (17), length 532)
+
+10.7.106.1.520 > 224.0.0.9.520: 
+RIPv2, Response, length: 504, routes: 25 or less
+
+	  AFI IPv4,        10.7.1.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,        10.7.2.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,        10.7.3.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,        10.7.4.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,        10.7.5.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,        10.7.6.0/30, tag 0x0000, metric: 1, next-hop: self
+	  AFI IPv4,        10.7.7.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,       10.7.11.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,       10.7.12.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,       10.7.13.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,       10.7.14.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,       10.7.15.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,       10.7.16.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,       10.7.17.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,      10.7.102.0/25, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,    10.7.102.128/26, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,    10.7.102.192/30, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,      10.7.103.0/26, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,     10.7.103.64/28, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,     10.7.103.80/30, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,      10.7.104.0/25, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,    10.7.104.128/25, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,    10.7.104.128/26, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,    10.7.104.252/30, tag 0x0000, metric: 4, next-hop: self
+	  AFI IPv4,      10.7.105.0/25, tag 0x0000, metric: 4, next-hop: self
+
+13:03:24.080349 IP (tos 0xc0, ttl 2, id 0, offset 0, flags [none], proto UDP (17), length 72)
+
+10.7.106.1.520 > 224.0.0.9.520: 
+
+RIPv2, Response, length: 44, routes: 2 or less
+
+	  AFI IPv4,    10.7.105.128/26, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,    10.7.105.192/30, tag 0x0000, metric: 3, next-hop: self
+
+13:03:24.080592 IP (tos 0xc0, ttl 2, id 0, offset 0, flags [none], proto UDP (17), length 532)
+10.7.106.1.520 > 10.7.106.2.520: 
+RIPv2, Response, length: 504, routes: 25 or less
+
+	  AFI IPv4,        10.7.1.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,        10.7.2.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,        10.7.3.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,        10.7.4.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,        10.7.5.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,        10.7.6.0/30, tag 0x0000, metric: 1, next-hop: self
+	  AFI IPv4,        10.7.7.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,       10.7.11.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,       10.7.12.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,       10.7.13.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,       10.7.14.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,       10.7.15.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,       10.7.16.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,       10.7.17.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,      10.7.102.0/25, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,    10.7.102.128/26, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,    10.7.102.192/30, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,      10.7.103.0/26, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,     10.7.103.64/28, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,     10.7.103.80/30, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,      10.7.104.0/25, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,    10.7.104.128/25, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,    10.7.104.128/26, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,    10.7.104.252/30, tag 0x0000, metric: 4, next-hop: self
+	  AFI IPv4,      10.7.105.0/25, tag 0x0000, metric: 4, next-hop: self
+
+13:03:24.080834 IP (tos 0xc0, ttl 2, id 0, offset 0, flags [none], proto UDP (17), length 72)
+
+10.7.106.1.520 > 10.7.106.2.520: 
+RIPv2, Response, length: 44, routes: 2 or less
+
+	  AFI IPv4,    10.7.105.128/26, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,    10.7.105.192/30, tag 0x0000, metric: 3, next-hop: self
+
+8 packets captured
+8 packets received by filter
+0 packets dropped by kernel
+
+root@router1:~# tcpdump -s1600 -vni eth1 port 520
+
+tcpdump: listening on eth1, link-type EN10MB (Ethernet), capture size 1600 bytes
+
+13:04:38.574247 IP (tos 0xc0, ttl 1, id 65172, offset 0, flags [DF], proto UDP (17), length 52)
+    10.7.106.81.520 > 224.0.0.9.520: 
+	RIPv2, Request, length: 24, routes: 1 or less
+	  AFI 0,         0.0.0.0/0 , tag 0x0000, metric: 16, next-hop: self
+
+13:04:38.574640 IP (tos 0xc0, ttl 64, id 57436, offset 0, flags [DF], proto UDP (17), length 532)
+
+    10.7.106.82.520 > 10.7.106.81.520: 
+	RIPv2, Response, length: 504, routes: 25 or less
+
+	  AFI IPv4,         0.0.0.0/0 , tag 0x0000, metric: 1, next-hop: self
+	  AFI IPv4,        10.7.1.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,        10.7.2.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,        10.7.3.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,        10.7.4.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,        10.7.5.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,        10.7.6.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,        10.7.7.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,       10.7.11.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,       10.7.12.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,       10.7.13.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,       10.7.14.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,       10.7.15.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,       10.7.16.0/30, tag 0x0000, metric: 1, next-hop: self
+	  AFI IPv4,       10.7.17.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,      10.7.102.0/25, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,    10.7.102.128/26, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,    10.7.102.192/30, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,      10.7.103.0/26, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,     10.7.103.64/28, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,     10.7.103.80/30, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,      10.7.104.0/25, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,    10.7.104.128/25, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,    10.7.104.128/26, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,    10.7.104.252/30, tag 0x0000, metric: 4, next-hop: self
+
+13:04:38.574742 IP (tos 0xc0, ttl 64, id 57437, offset 0, flags [DF], proto UDP (17), length 112)
+
+    10.7.106.82.520 > 10.7.106.81.520: 
+	RIPv2, Response, length: 84, routes: 4 or less
+
+	  AFI IPv4,      10.7.105.0/25, tag 0x0000, metric: 4, next-hop: self
+	  AFI IPv4,    10.7.105.128/26, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,    10.7.105.192/30, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,     10.7.106.64/28, tag 0x0000, metric: 1, next-hop: self
+
+13:04:39.144300 IP (tos 0xc0, ttl 1, id 38489, offset 0, flags [DF], proto UDP (17), length 532)
+
+    10.7.106.82.520 > 224.0.0.9.520: 
+	RIPv2, Response, length: 504, routes: 25 or less
+
+	  AFI IPv4,         0.0.0.0/0 , tag 0x0000, metric: 1, next-hop: self
+	  AFI IPv4,        10.7.1.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,        10.7.2.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,        10.7.3.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,        10.7.4.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,        10.7.5.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,        10.7.6.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,        10.7.7.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,       10.7.11.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,       10.7.12.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,       10.7.13.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,       10.7.14.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,       10.7.15.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,       10.7.16.0/30, tag 0x0000, metric: 1, next-hop: self
+	  AFI IPv4,       10.7.17.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,      10.7.102.0/25, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,    10.7.102.128/26, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,    10.7.102.192/30, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,      10.7.103.0/26, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,     10.7.103.64/28, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,     10.7.103.80/30, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,      10.7.104.0/25, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,    10.7.104.128/25, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,    10.7.104.128/26, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,    10.7.104.252/30, tag 0x0000, metric: 4, next-hop: self
+
+13:04:39.144315 IP (tos 0xc0, ttl 1, id 38490, offset 0, flags [DF], proto UDP (17), length 112)
+
+    10.7.106.82.520 > 224.0.0.9.520: 
+	RIPv2, Response, length: 84, routes: 4 or less
+
+	  AFI IPv4,      10.7.105.0/25, tag 0x0000, metric: 4, next-hop: self
+	  AFI IPv4,    10.7.105.128/26, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,    10.7.105.192/30, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,     10.7.106.64/28, tag 0x0000, metric: 1, next-hop: self
+
+13:04:48.853933 IP (tos 0xc0, ttl 1, id 105, offset 0, flags [DF], proto UDP (17), length 532)
+
+    10.7.106.81.520 > 224.0.0.9.520: 
+	RIPv2, Response, length: 504, routes: 25 or less
+
+	  AFI IPv4,         0.0.0.0/0 , tag 0x0000, metric: 1, next-hop: self
+	  AFI IPv4,        10.7.1.0/30, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,        10.7.2.0/30, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,        10.7.3.0/30, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,        10.7.4.0/30, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,        10.7.5.0/30, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,        10.7.6.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,        10.7.7.0/30, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,       10.7.11.0/30, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,       10.7.12.0/30, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,       10.7.13.0/30, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,       10.7.14.0/30, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,       10.7.15.0/30, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,       10.7.17.0/30, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,      10.7.102.0/25, tag 0x0000, metric: 4, next-hop: self
+	  AFI IPv4,    10.7.102.128/26, tag 0x0000, metric: 4, next-hop: self
+	  AFI IPv4,    10.7.102.192/30, tag 0x0000, metric: 4, next-hop: self
+	  AFI IPv4,      10.7.103.0/26, tag 0x0000, metric: 4, next-hop: self
+	  AFI IPv4,     10.7.103.64/28, tag 0x0000, metric: 4, next-hop: self
+	  AFI IPv4,      10.7.104.0/25, tag 0x0000, metric: 4, next-hop: self
+	  AFI IPv4,    10.7.104.128/25, tag 0x0000, metric: 4, next-hop: self
+	  AFI IPv4,    10.7.104.128/26, tag 0x0000, metric: 4, next-hop: self
+	  AFI IPv4,    10.7.104.252/30, tag 0x0000, metric: 5, next-hop: self
+	  AFI IPv4,      10.7.105.0/25, tag 0x0000, metric: 5, next-hop: self
+	  AFI IPv4,    10.7.105.128/26, tag 0x0000, metric: 4, next-hop: self
+
+13:04:48.854050 IP (tos 0xc0, ttl 1, id 106, offset 0, flags [DF], proto UDP (17), length 72)
+
+    10.7.106.81.520 > 224.0.0.9.520: 
+	RIPv2, Response, length: 44, routes: 2 or less
+
+	  AFI IPv4,    10.7.105.192/30, tag 0x0000, metric: 4, next-hop: self
+	  AFI IPv4,      10.7.106.0/26, tag 0x0000, metric: 1, next-hop: self
+^C
+7 packets captured
+7 packets received by filter
+0 packets dropped by kernel
+
+
+
+
+
+
+
+Router2:
+
+
+root@router2:~# tcpdump -s1600 -vni eth0 port 520
+
+tcpdump: listening on eth0, link-type EN10MB (Ethernet), capture size 1600 bytes
+
+13:05:50.934262 IP (tos 0xc0, ttl 1, id 48293, offset 0, flags [DF], proto UDP (17), length 52)
+
+    10.7.106.82.520 > 224.0.0.9.520: 
+	RIPv2, Request, length: 24, routes: 1 or less
+
+	  AFI 0,         0.0.0.0/0 , tag 0x0000, metric: 16, next-hop: self
+
+13:05:50.934680 IP (tos 0xc0, ttl 64, id 5332, offset 0, flags [DF], proto UDP (17), length 532)
+
+    10.7.106.81.520 > 10.7.106.82.520: 
+	RIPv2, Response, length: 504, routes: 25 or less
+
+	  AFI IPv4,         0.0.0.0/0 , tag 0x0000, metric: 1, next-hop: self
+	  AFI IPv4,        10.7.1.0/30, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,        10.7.2.0/30, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,        10.7.3.0/30, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,        10.7.4.0/30, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,        10.7.5.0/30, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,        10.7.6.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,        10.7.7.0/30, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,       10.7.11.0/30, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,       10.7.12.0/30, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,       10.7.13.0/30, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,       10.7.14.0/30, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,       10.7.15.0/30, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,       10.7.17.0/30, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,      10.7.102.0/25, tag 0x0000, metric: 4, next-hop: self
+	  AFI IPv4,    10.7.102.128/26, tag 0x0000, metric: 4, next-hop: self
+	  AFI IPv4,    10.7.102.192/30, tag 0x0000, metric: 4, next-hop: self
+	  AFI IPv4,      10.7.103.0/26, tag 0x0000, metric: 4, next-hop: self
+	  AFI IPv4,     10.7.103.64/28, tag 0x0000, metric: 4, next-hop: self
+	  AFI IPv4,      10.7.104.0/25, tag 0x0000, metric: 4, next-hop: self
+	  AFI IPv4,    10.7.104.128/25, tag 0x0000, metric: 4, next-hop: self
+	  AFI IPv4,    10.7.104.128/26, tag 0x0000, metric: 4, next-hop: self
+	  AFI IPv4,    10.7.104.252/30, tag 0x0000, metric: 5, next-hop: self
+	  AFI IPv4,      10.7.105.0/25, tag 0x0000, metric: 5, next-hop: self
+	  AFI IPv4,    10.7.105.128/26, tag 0x0000, metric: 4, next-hop: self
+
+13:05:50.934766 IP (tos 0xc0, ttl 64, id 5333, offset 0, flags [DF], proto UDP (17), length 72)
+
+    10.7.106.81.520 > 10.7.106.82.520: 
+
+	RIPv2, Response, length: 44, routes: 2 or less
+
+	  AFI IPv4,    10.7.105.192/30, tag 0x0000, metric: 4, next-hop: self
+	  AFI IPv4,      10.7.106.0/26, tag 0x0000, metric: 1, next-hop: self
+
+13:05:52.973748 IP (tos 0xc0, ttl 1, id 10083, offset 0, flags [DF], proto UDP (17), length 532)
+
+    10.7.106.81.520 > 224.0.0.9.520: 
+	RIPv2, Response, length: 504, routes: 25 or less
+
+	  AFI IPv4,         0.0.0.0/0 , tag 0x0000, metric: 1, next-hop: self
+	  AFI IPv4,        10.7.1.0/30, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,        10.7.2.0/30, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,        10.7.3.0/30, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,        10.7.4.0/30, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,        10.7.5.0/30, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,        10.7.6.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,        10.7.7.0/30, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,       10.7.11.0/30, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,       10.7.12.0/30, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,       10.7.13.0/30, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,       10.7.14.0/30, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,       10.7.15.0/30, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,       10.7.17.0/30, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,      10.7.102.0/25, tag 0x0000, metric: 4, next-hop: self
+	  AFI IPv4,    10.7.102.128/26, tag 0x0000, metric: 4, next-hop: self
+	  AFI IPv4,    10.7.102.192/30, tag 0x0000, metric: 4, next-hop: self
+	  AFI IPv4,      10.7.103.0/26, tag 0x0000, metric: 4, next-hop: self
+	  AFI IPv4,     10.7.103.64/28, tag 0x0000, metric: 4, next-hop: self
+	  AFI IPv4,      10.7.104.0/25, tag 0x0000, metric: 4, next-hop: self
+	  AFI IPv4,    10.7.104.128/25, tag 0x0000, metric: 4, next-hop: self
+	  AFI IPv4,    10.7.104.128/26, tag 0x0000, metric: 4, next-hop: self
+	  AFI IPv4,    10.7.104.252/30, tag 0x0000, metric: 5, next-hop: self
+	  AFI IPv4,      10.7.105.0/25, tag 0x0000, metric: 5, next-hop: self
+	  AFI IPv4,    10.7.105.128/26, tag 0x0000, metric: 4, next-hop: self
+
+13:05:52.973771 IP (tos 0xc0, ttl 1, id 10084, offset 0, flags [DF], proto UDP (17), length 72)
+
+    10.7.106.81.520 > 224.0.0.9.520: 
+	RIPv2, Response, length: 44, routes: 2 or less
+
+	  AFI IPv4,    10.7.105.192/30, tag 0x0000, metric: 4, next-hop: self
+	  AFI IPv4,      10.7.106.0/26, tag 0x0000, metric: 1, next-hop: self
+
+13:06:06.266890 IP (tos 0xc0, ttl 1, id 49468, offset 0, flags [DF], proto UDP (17), length 532)
+
+    10.7.106.82.520 > 224.0.0.9.520: 
+	RIPv2, Response, length: 504, routes: 25 or less
+
+	  AFI IPv4,         0.0.0.0/0 , tag 0x0000, metric: 1, next-hop: self
+	  AFI IPv4,        10.7.1.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,        10.7.2.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,        10.7.3.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,        10.7.4.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,        10.7.5.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,        10.7.6.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,        10.7.7.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,       10.7.11.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,       10.7.12.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,       10.7.13.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,       10.7.14.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,       10.7.15.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,       10.7.16.0/30, tag 0x0000, metric: 1, next-hop: self
+	  AFI IPv4,       10.7.17.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,      10.7.102.0/25, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,    10.7.102.128/26, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,    10.7.102.192/30, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,      10.7.103.0/26, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,     10.7.103.64/28, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,     10.7.103.80/30, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,      10.7.104.0/25, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,    10.7.104.128/25, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,    10.7.104.128/26, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,    10.7.104.252/30, tag 0x0000, metric: 4, next-hop: self
+
+13:06:06.267074 IP (tos 0xc0, ttl 1, id 49469, offset 0, flags [DF], proto UDP (17), length 112)
+
+    10.7.106.82.520 > 224.0.0.9.520: 
+	RIPv2, Response, length: 84, routes: 4 or less
+
+	  AFI IPv4,      10.7.105.0/25, tag 0x0000, metric: 4, next-hop: self
+	  AFI IPv4,    10.7.105.128/26, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,    10.7.105.192/30, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,     10.7.106.64/28, tag 0x0000, metric: 1, next-hop: self
+
+13:06:27.974657 IP (tos 0xc0, ttl 1, id 16559, offset 0, flags [DF], proto UDP (17), length 532)
+
+    10.7.106.81.520 > 224.0.0.9.520: 
+	RIPv2, Response, length: 504, routes: 25 or less
+
+	  AFI IPv4,         0.0.0.0/0 , tag 0x0000, metric: 1, next-hop: self
+	  AFI IPv4,        10.7.1.0/30, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,        10.7.2.0/30, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,        10.7.3.0/30, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,        10.7.4.0/30, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,        10.7.5.0/30, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,        10.7.6.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,        10.7.7.0/30, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,       10.7.11.0/30, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,       10.7.12.0/30, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,       10.7.13.0/30, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,       10.7.14.0/30, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,       10.7.15.0/30, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,       10.7.17.0/30, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,      10.7.102.0/25, tag 0x0000, metric: 4, next-hop: self
+	  AFI IPv4,    10.7.102.128/26, tag 0x0000, metric: 4, next-hop: self
+	  AFI IPv4,    10.7.102.192/30, tag 0x0000, metric: 4, next-hop: self
+	  AFI IPv4,      10.7.103.0/26, tag 0x0000, metric: 4, next-hop: self
+	  AFI IPv4,     10.7.103.64/28, tag 0x0000, metric: 4, next-hop: self
+	  AFI IPv4,      10.7.104.0/25, tag 0x0000, metric: 4, next-hop: self
+	  AFI IPv4,    10.7.104.128/25, tag 0x0000, metric: 4, next-hop: self
+	  AFI IPv4,    10.7.104.128/26, tag 0x0000, metric: 4, next-hop: self
+	  AFI IPv4,    10.7.104.252/30, tag 0x0000, metric: 5, next-hop: self
+	  AFI IPv4,      10.7.105.0/25, tag 0x0000, metric: 5, next-hop: self
+	  AFI IPv4,    10.7.105.128/26, tag 0x0000, metric: 4, next-hop: self
+
+13:06:27.974682 IP (tos 0xc0, ttl 1, id 16560, offset 0, flags [DF], proto UDP (17), length 72)
+
+    10.7.106.81.520 > 224.0.0.9.520: 
+	RIPv2, Response, length: 44, routes: 2 or less
+
+	  AFI IPv4,    10.7.105.192/30, tag 0x0000, metric: 4, next-hop: self
+	  AFI IPv4,      10.7.106.0/26, tag 0x0000, metric: 1, next-hop: self
+^C
+9 packets captured
+9 packets received by filter
+0 packets dropped by kernel
+
+
+root@router2:~# tcpdump -s1600 -vni eth1 port 520
+
+tcpdump: listening on eth1, link-type EN10MB (Ethernet), capture size 1600 bytes
+
+13:07:20.578818 IP (tos 0xc0, ttl 1, id 7467, offset 0, flags [DF], proto UDP (17), length 52)
+
+    10.7.106.65.520 > 224.0.0.9.520: 
+	RIPv2, Request, length: 24, routes: 1 or less
+
+	  AFI 0,         0.0.0.0/0 , tag 0x0000, metric: 16, next-hop: self
+
+13:07:54.272288 IP (tos 0xc0, ttl 1, id 11176, offset 0, flags [DF], proto UDP (17), length 532)
+
+    10.7.106.65.520 > 224.0.0.9.520: 
+	RIPv2, Response, length: 504, routes: 25 or less
+
+	  AFI IPv4,         0.0.0.0/0 , tag 0x0000, metric: 1, next-hop: self
+	  AFI IPv4,        10.7.1.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,        10.7.2.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,        10.7.3.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,        10.7.4.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,        10.7.5.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,        10.7.6.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,        10.7.7.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,       10.7.11.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,       10.7.12.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,       10.7.13.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,       10.7.14.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,       10.7.15.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,       10.7.16.0/30, tag 0x0000, metric: 1, next-hop: self
+	  AFI IPv4,       10.7.17.0/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,      10.7.102.0/25, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,    10.7.102.128/26, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,    10.7.102.192/30, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,      10.7.103.0/26, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,     10.7.103.64/28, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,     10.7.103.80/30, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,      10.7.104.0/25, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,    10.7.104.128/25, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,    10.7.104.128/26, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,    10.7.104.252/30, tag 0x0000, metric: 4, next-hop: self
+
+13:07:54.272410 IP (tos 0xc0, ttl 1, id 11177, offset 0, flags [DF], proto UDP (17), length 132)
+
+    10.7.106.65.520 > 224.0.0.9.520: 
+	RIPv2, Response, length: 104, routes: 5 or less
+
+	  AFI IPv4,      10.7.105.0/25, tag 0x0000, metric: 4, next-hop: self
+	  AFI IPv4,    10.7.105.128/26, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,    10.7.105.192/30, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,      10.7.106.0/26, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,     10.7.106.80/30, tag 0x0000, metric: 1, next-hop: self
+^C
+3 packets captured
+3 packets received by filter
+0 packets dropped by kernel
+
+root@router2:~# tcpdump -s1600 -vni eth2 port 520
+
+tcpdump: listening on eth2, link-type EN10MB (Ethernet), capture size 1600 bytes
+
+13:09:07.765435 IP (tos 0xc0, ttl 1, id 9307, offset 0, flags [DF], proto UDP (17), length 52)
+
+    10.7.16.2.520 > 224.0.0.9.520: 
+	RIPv2, Request, length: 24, routes: 1 or less
+
+	  AFI 0,         0.0.0.0/0 , tag 0x0000, metric: 16, next-hop: self
+
+13:09:07.765816 IP (tos 0xc0, ttl 64, id 20722, offset 0, flags [DF], proto UDP (17), length 532)
+
+    10.7.16.1.520 > 10.7.16.2.520: 
+	RIPv2, Response, length: 504, routes: 25 or less
+
+	  AFI IPv4,         0.0.0.0/0 , tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,        10.7.1.0/30, tag 0x0000, metric: 1, next-hop: self
+	  AFI IPv4,        10.7.2.0/30, tag 0x0000, metric: 1, next-hop: self
+	  AFI IPv4,        10.7.3.0/30, tag 0x0000, metric: 1, next-hop: self
+	  AFI IPv4,        10.7.4.0/30, tag 0x0000, metric: 1, next-hop: self
+	  AFI IPv4,        10.7.5.0/30, tag 0x0000, metric: 1, next-hop: self
+	  AFI IPv4,        10.7.6.0/30, tag 0x0000, metric: 1, next-hop: self
+	  AFI IPv4,        10.7.7.0/30, tag 0x0000, metric: 1, next-hop: self
+	  AFI IPv4,       10.7.11.0/30, tag 0x0000, metric: 1, next-hop: self
+	  AFI IPv4,       10.7.12.0/30, tag 0x0000, metric: 1, next-hop: self
+	  AFI IPv4,       10.7.13.0/30, tag 0x0000, metric: 1, next-hop: self
+	  AFI IPv4,       10.7.14.0/30, tag 0x0000, metric: 1, next-hop: self
+	  AFI IPv4,       10.7.15.0/30, tag 0x0000, metric: 1, next-hop: self
+	  AFI IPv4,       10.7.17.0/30, tag 0x0000, metric: 1, next-hop: self
+	  AFI IPv4,      10.7.102.0/25, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,    10.7.102.128/26, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,    10.7.102.192/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,      10.7.103.0/26, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,     10.7.103.64/28, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,     10.7.103.80/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,      10.7.104.0/25, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,    10.7.104.128/25, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,    10.7.104.128/26, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,    10.7.104.252/30, tag 0x0000, metric: 3, next-hop: self
+	  AFI IPv4,      10.7.105.0/25, tag 0x0000, metric: 3, next-hop: self
+
+13:09:07.765910 IP (tos 0xc0, ttl 64, id 20723, offset 0, flags [DF], proto UDP (17), length 92)
+
+    10.7.16.1.520 > 10.7.16.2.520: 
+	RIPv2, Response, length: 64, routes: 3 or less
+
+	  AFI IPv4,    10.7.105.128/26, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,    10.7.105.192/30, tag 0x0000, metric: 2, next-hop: self
+	  AFI IPv4,      10.7.106.0/26, tag 0x0000, metric: 2, next-hop: self
+^C
+3 packets captured
+3 packets received by filter
+0 packets dropped by kernel
+
