@@ -1,0 +1,50 @@
+CISCO
+-------------------------------------------
+router bgp 65006
+ bgp log-neighbor-changes
+ no bgp default ipv4-unicast
+ neighbor 10.7.6.1 remote-as 65000
+ neighbor FE80::1%FastEthernet0/0 remote-as 65000
+ !
+ address-family ipv4
+  network 10.7.106.0 mask 255.255.255.192
+  network 10.7.106.64 mask 255.255.255.240
+  network 10.7.106.80 mask 255.255.255.252
+  neighbor 10.7.6.1 activate
+ exit-address-family
+ !
+ address-family ipv6
+  network 2001:638:602:118A::/66
+  network 2001:638:602:118A:4000::/66
+  network 2001:638:602:118A:8000::/66
+  neighbor FE80::1%FastEthernet0/0 activate
+ exit-address-family
+
+
+ROUTER 2 - QUAGGA
+----------------------------------------
+router bgp 65006
+ bgp router-id 10.7.106.82
+ no bgp default ipv4-unicast
+ network 10.7.106.0/26
+ network 10.7.106.64/28
+ network 10.7.106.80/30
+ redistribute rip
+ neighbor 10.7.16.1 remote-as 65000
+ neighbor 10.7.16.1 activate
+ neighbor 10.7.16.1 route-map PREPEND out
+ neighbor fe80::1 remote-as 65000
+ neighbor fe80::1 interface eth2
+ neighbor fe80::1 activate
+ neighbor fe80::1 route-map PREPEND out
+!
+ address-family ipv6
+ network 2001:638:602:118a::/66
+ network 2001:638:602:118a:4000::/66
+ network 2001:638:602:118a:8000::/66
+ neighbor fe80::1 activate
+ exit-address-family
+!
+route-map PREPEND permit 10
+ set as-path prepend 65006 65006 65006
+

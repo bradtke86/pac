@@ -711,8 +711,6 @@ onClick="toggleBlockText('task4', this, 'Aufgabe 4 anzeigen', 'Aufgabe 4 ausblen
 <span style="display:none;" id="task4"><br></br>
 <a href="doku_4.txt"><b>Aufgabe 4</b></a>
 <br></br>
-</span>
-<br></br>
 
 <span style="color: #FF0000; text-decoration: underline; cursor: pointer;"
 onClick="toggleBlockText('task5', this, 'Aufgabe 5 anzeigen', 'Aufgabe 5 ausblenden');">Aufgabe 5 anzeigen</span>

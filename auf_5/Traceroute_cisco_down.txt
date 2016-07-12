@@ -1,0 +1,27 @@
+y0053599@x12:~$ traceroute 10.7.106.62
+traceroute to 10.7.106.62 (10.7.106.62), 30 hops max, 60 byte packets
+ 1  m1-core.ibr.cs.tu-bs.de (134.169.34.2)  0.256 ms  0.254 ms  0.254 ms
+ 2  pac-router.ibr.cs.tu-bs.de (134.169.35.254)  0.273 ms  0.290 ms  0.300 ms
+ 3  m1-core.ibr.cs.tu-bs.de (134.169.34.2)  0.490 ms  0.495 ms  0.495 ms
+ 4  * * *
+ 5  * * *
+ 6  * * *
+ 7  * * *
+ 8  * * *
+ 9  * m1-core.ibr.cs.tu-bs.de (134.169.34.2)  1.518 ms  1.560 ms
+10  pac-router.ibr.cs.tu-bs.de (134.169.35.254)  1.843 ms  1.854 ms  1.869 ms
+11  m1-core.ibr.cs.tu-bs.de (134.169.34.2)  2.035 ms  2.036 ms  2.036 ms
+12  * * *
+13  m1-core.ibr.cs.tu-bs.de (134.169.34.2)  2.185 ms * *
+14  * * *
+15  * * *
+16  * * *
+17  * * 10.7.106.62 (10.7.106.62)  4.061 ms
+y0053599@x12:~$ traceroute 10.7.106.62
+traceroute to 10.7.106.62 (10.7.106.62), 30 hops max, 60 byte packets
+ 1  m1-core.ibr.cs.tu-bs.de (134.169.34.2)  0.219 ms  0.216 ms  0.213 ms
+ 2  pac-router.ibr.cs.tu-bs.de (134.169.35.254)  0.256 ms  0.285 ms  0.313 ms
+ 3  10.7.106.82 (10.7.106.82)  3.148 ms * *
+ 4  10.7.106.81 (10.7.106.81)  1.819 ms *  1.842 ms
+ 5  10.7.106.62 (10.7.106.62)  3.649 ms  5.337 ms  2.784 ms
+
