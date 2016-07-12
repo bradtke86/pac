@@ -110,8 +110,12 @@
 
 <span style="color: #FF0000; text-decoration: underline; cursor: pointer;"
 onClick="toggleBlockText('task1', this, 'Aufgabe 1 anzeigen', 'Aufgabe 1 ausblenden');">Aufgabe 1 anzeigen</span>
-<span style="display:none;" id="task1"><br></br>								
-								
+<span style="display:none;" id="task1">
+
+<br></br>
+<a href="https://www.ibr.cs.tu-bs.de/courses/ss16/pac/docs/pac_2016_aufgabe_1.pdf?lang=d" ><b>Aufgabe 1</b></a>	
+<br></br>
+
 <b>Vergabe der IPv4- und IPv6-Adressen</b>
 
 <br></br>
@@ -189,7 +193,11 @@ fe80::1                               // Address of ISP<br><br>
 <span style="color: #FF0000; text-decoration: underline; cursor: pointer;"
 onClick="toggleBlockText('task2', this, 'Aufgabe 2 anzeigen', 'Aufgabe 2 ausblenden');">Aufgabe 2 anzeigen</span>
 <span style="display:none;" id="task2">
+
 <br></br>
+<a href="https://www.ibr.cs.tu-bs.de/courses/ss16/pac/docs/pac_2016_aufgabe_2.pdf?lang=d" ><b>Aufgabe 2</b></a>	
+<br></br>
+
 
 <b>Konfiguration Cisco Router über Cisco CLI</b><br><br>
 IPv6 aktivieren: change to global configuration mode >> Befehl: "ipv6 unicast-routing"<br><br>
@@ -239,10 +247,15 @@ Starten des Webservers: "service apache2 start"<br><br>
 
 <span style="color: #FF0000; text-decoration: underline; cursor: pointer;"
 onClick="toggleBlockText('task3', this, 'Aufgabe 3 anzeigen', 'Aufgabe 3 ausblenden');">Aufgabe 3 anzeigen</span>
-<span style="display:none;" id="task3"><br></br>
+<span style="display:none;" id="task3">
 
-<b>Aufgabe 3</b><br></br>
-1.)<br></br>
+<br></br>
+<a href="https://www.ibr.cs.tu-bs.de/courses/ss16/pac/docs/pac_2016_aufgabe_3.pdf?lang=d" ><b>Aufgabe 3</b></a>	
+<br></br>
+
+
+<b>1.)</b>
+<br></br>
 Folgende Programme sind unter ubuntu Server bereits vorhanden:<br></br>
 - tcpdump<br></br>
 - ping<br></br>
@@ -667,12 +680,19 @@ Data (63 bytes)<br></br>
 1 packet captured<br></br>
 
 <br></br>
-</span><br></br>
+</span>
+<br></br>
 
-<b>2)</b><br></br>
+<span style="color: #0000FF; text-decoration: underline; cursor: pointer;"
+onClick="toggleBlockText('subtask2', this, 'Aufgabenteil 2 anzeigen', 'Aufgabenteil 2 ausblenden');">Aufgabenteil 2 anzeigen</span>
+<span style="display:none;" id="subtask2">
+<br></br>
+<b>2)</b>
+<br></br>
 Tracepath zu "www.mit.edu" liefert folgende Ausgabe:<br></br>
 <br></br>
-<b>pacuser@Pac06Webserver1:~$ tracepath www.mit.edu</b><br></br>
+<b>pacuser@Pac06Webserver1:~$ tracepath www.mit.edu</b>
+<br></br>
  <b>1?</b>: [LOCALHOST]                                 <b>pmtu 1500</b><br></br>
  1:  pac06-cisco.cghm.net                                  1.141ms <br></br>
  1:  pac06-cisco.cghm.net                                  1.050ms <br></br>
@@ -694,7 +714,8 @@ Tracepath zu "www.mit.edu" liefert folgende Ausgabe:<br></br>
 2. Spalte: zeigt entweder eine <b>Adresse zum Router</b> (bzw. den <b>DNS</b>-Namen) oder [LOCALHOST], falls nicht zum Netzwerk gesendet wurde<br></br> 
 3. Spalte: zeigt <b>RTT</b> an (Round Trip Time) oder auch <b>PMTU</b><br></br>
 4. Spalte: zeigt an, ab welchem Hop (falls vorhanden) ein asymmetrischer Pfad zwischen Hin- und Rückrichtung auftritt<br></br>
-																		
+</span>
+																	
 <b>4)</b><br></br>
 Ausgabe von tcpdump in der Datei <a href="/files/btcdump">btcdump</a><br></br>
 
@@ -708,21 +729,28 @@ Bei "www.dfg.de" wird die telnet-Verbindung zurückgewiesen.<br></br>
 
 <span style="color: #FF0000; text-decoration: underline; cursor: pointer;"
 onClick="toggleBlockText('task4', this, 'Aufgabe 4 anzeigen', 'Aufgabe 4 ausblenden');">Aufgabe 4 anzeigen</span>
-<span style="display:none;" id="task4"><br></br>
-<a href="doku_4.txt"><b>Aufgabe 4</b></a>
+<span style="display:none;" id="task4">
+<br></br>
+<a href="https://www.ibr.cs.tu-bs.de/courses/ss16/pac/docs/pac_2016_aufgabe_4.pdf?lang=d" ><b>Aufgabe 4</b></a>	
+<br></br>
+<a href="doku_4.txt"><b>Dokumentation Aufgabe 4</b></a>
+<br></br>
+</span>
 <br></br>
 
 <span style="color: #FF0000; text-decoration: underline; cursor: pointer;"
 onClick="toggleBlockText('task5', this, 'Aufgabe 5 anzeigen', 'Aufgabe 5 ausblenden');">Aufgabe 5 anzeigen</span>
-<span style="display:none;" id="task5"><br></br>
-<b>Aufgabe 5</b>
+<span style="display:none;" id="task5">
+
+<br></br>
+<a href="https://www.ibr.cs.tu-bs.de/courses/ss16/pac/docs/pac_2016_aufgabe_5.pdf?lang=d" ><b>Aufgabe 5</b></a>	
+<br></br>
 
 <br></br>
 <a href="img/netzdiagramm_backup_link.pdf"><b>Erweiterter Netzplan mit Uplink</b></a>
 <br></br>
 
 <b>5)</b>
-<br></br>
 <br></br>
 <a href="auf_5/Konfiguration_DNS_Slave.txt">Einrichten von Bind als Slave auf dem Webserver 2</a>
 <br></br>
@@ -745,9 +773,12 @@ Zustand des Netzes, nachdem eth2 auf Router2 wieder hochgefahren wurde: <a href=
 
 <span style="color: #FF0000; text-decoration: underline; cursor: pointer;"
 onClick="toggleBlockText('task6', this, 'Aufgabe 6 anzeigen', 'Aufgabe 6 ausblenden');">Aufgabe 6 anzeigen</span>
-<span style="display:none;" id="task6"><br></br>
-<b>Aufgabe 6</b>
+<span style="display:none;" id="task6">
+
 <br></br>
+<a href="https://www.ibr.cs.tu-bs.de/courses/ss16/pac/docs/pac_2016_aufgabe_6.pdf?lang=d" ><b>Aufgabe 6</b></a>	
+<br></br>
+
 <b>1.</b>
 <br></br>
 <b>IGP</b>
