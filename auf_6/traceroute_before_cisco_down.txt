@@ -1,0 +1,33 @@
+Traceroute zu Webserver1 liefert:
+
+traceroute to 10.7.106.62 (10.7.106.62), 30 hops max, 60 byte packets
+ 1  m1-core.ibr.cs.tu-bs.de (134.169.34.2)  0.212 ms  0.204 ms  0.203 ms
+ 2  pac-router.ibr.cs.tu-bs.de (134.169.35.254)  0.288 ms  0.318 ms  0.326 ms
+ 3  10.7.6.2 (10.7.6.2)  1.789 ms  2.169 ms  2.532 ms
+ 4  10.7.106.62 (10.7.106.62)  1.359 ms  1.415 ms  1.419 ms
+
+Traceroute zu Webserver2 liefert:
+
+traceroute to 10.7.106.78 (10.7.106.78), 30 hops max, 60 byte packets
+ 1  m1-core.ibr.cs.tu-bs.de (134.169.34.2)  0.226 ms  0.229 ms  0.217 ms
+ 2  pac-router.ibr.cs.tu-bs.de (134.169.35.254)  0.347 ms  0.384 ms  0.398 ms
+ 3  10.7.6.2 (10.7.6.2)  1.724 ms  2.318 ms  2.652 ms
+ 4  10.7.106.81 (10.7.106.81)  1.464 ms *  1.505 ms
+ 5  10.7.106.82 (10.7.106.82)  1.702 ms *  1.798 ms
+ 6  10.7.106.78 (10.7.106.78)  2.038 ms  1.319 ms  1.074 ms
+
+Traceroute zum Router 1 liefert:
+
+traceroute to 10.7.106.2 (10.7.106.2), 30 hops max, 60 byte packets
+ 1  m1-core.ibr.cs.tu-bs.de (134.169.34.2)  0.219 ms  0.213 ms  0.209 ms
+ 2  pac-router.ibr.cs.tu-bs.de (134.169.35.254)  0.374 ms  0.387 ms  0.396 ms
+ 3  10.7.6.2 (10.7.6.2)  2.140 ms  2.261 ms  2.680 ms
+ 4  10.7.106.2 (10.7.106.2)  1.513 ms  1.323 ms  1.404 ms
+
+Traceroute zum Router 2 liefert:
+
+traceroute to 10.7.16.2 (10.7.16.2), 30 hops max, 60 byte packets
+ 1  m1-core.ibr.cs.tu-bs.de (134.169.34.2)  0.229 ms  0.218 ms  0.217 ms
+ 2  pac-router.ibr.cs.tu-bs.de (134.169.35.254)  0.355 ms  0.387 ms  0.408 ms
+ 3  * 10.7.16.2 (10.7.16.2)  0.910 ms  1.178 ms
+

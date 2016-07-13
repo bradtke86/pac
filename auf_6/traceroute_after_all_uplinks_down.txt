@@ -1,0 +1,25 @@
+traceroute to 10.7.106.62 (10.7.106.62), 30 hops max, 60 byte packets
+ 1  m1-core.ibr.cs.tu-bs.de (134.169.34.2)  0.095 ms  0.084 ms  0.063 ms
+ 2  pac-router.ibr.cs.tu-bs.de (134.169.35.254)  0.285 ms  0.296 ms  0.308 ms
+ 3  pac-router.ibr.cs.tu-bs.de (134.169.35.254)  2664.065 ms !H  2664.075 ms !H  2664.077 ms !H
+
+traceroute to 10.7.106.78 (10.7.106.78), 30 hops max, 60 byte packets
+ 1  m1-core.ibr.cs.tu-bs.de (134.169.34.2)  0.219 ms  0.212 ms  0.207 ms
+ 2  pac-router.ibr.cs.tu-bs.de (134.169.35.254)  0.372 ms  0.382 ms  0.394 ms
+ 3  pac-router.ibr.cs.tu-bs.de (134.169.35.254)  1418.088 ms !H  1418.094 ms !H *
+
+traceroute to 10.7.106.2 (10.7.106.2), 30 hops max, 60 byte packets
+ 1  m1-core.ibr.cs.tu-bs.de (134.169.34.2)  0.226 ms  0.217 ms  0.215 ms
+ 2  pac-router.ibr.cs.tu-bs.de (134.169.35.254)  0.290 ms  0.306 ms  0.324 ms
+ 3  pac-router.ibr.cs.tu-bs.de (134.169.35.254)  1098.906 ms !H  1098.919 ms !H  1098.925 ms !H
+
+traceroute to 10.7.106.81 (10.7.106.81), 30 hops max, 60 byte packets
+ 1  m1-core.ibr.cs.tu-bs.de (134.169.34.2)  0.218 ms  0.208 ms  0.209 ms
+ 2  pac-router.ibr.cs.tu-bs.de (134.169.35.254)  0.278 ms  0.299 ms  0.320 ms
+ 3  pac-router.ibr.cs.tu-bs.de (134.169.35.254)  323.681 ms !H  323.695 ms !H *
+
+traceroute to 10.7.106.82 (10.7.106.82), 30 hops max, 60 byte packets
+ 1  m1-core.ibr.cs.tu-bs.de (134.169.34.2)  0.222 ms  0.226 ms  0.223 ms
+ 2  pac-router.ibr.cs.tu-bs.de (134.169.35.254)  0.351 ms  0.370 ms  0.380 ms
+ 3  pac-router.ibr.cs.tu-bs.de (134.169.35.254)  2997.725 ms !H  2997.793 ms !H  2997.797 ms !H
+
